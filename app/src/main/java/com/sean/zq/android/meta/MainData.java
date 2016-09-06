@@ -39,6 +39,7 @@ public class MainData {
     }
 
     public enum MainDataType{
+        qa,
         view,
         layout,
         launch,

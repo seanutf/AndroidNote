@@ -75,6 +75,8 @@ public class MainListDataAdapter extends BaseAdapter{
 
     private void onClickEvent(MainData.MainDataType type) {
         switch (type){
+            case qa:
+                break;
             case view:
                 break;
             case launch:

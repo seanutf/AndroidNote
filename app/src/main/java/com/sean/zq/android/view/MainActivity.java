@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private List getMainDataList() {
         List<MainData> list = new ArrayList<MainData>();
         //创建对象
+        MainData mainDataQA = new MainData("问题",MainData.MainDataType.qa,"开发此应用时遇到的问题");
         MainData mainDataView = new MainData("View",MainData.MainDataType.view,"包括View和ViewGroup的学习");
         MainData mainDataLayout = new MainData("Layout",MainData.MainDataType.layout,"Layout的学习");
         MainData mainDataLaunch = new MainData("应用启动",MainData.MainDataType.launch,"App启动相关的学习");
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         MainData mainDataAnimation = new MainData("动画",MainData.MainDataType.animation,"Android中动画的学习");
 
         //添加对象到列表
+        list.add(mainDataQA);
         list.add(mainDataView);
         list.add(mainDataLayout);
         list.add(mainDataLaunch);
