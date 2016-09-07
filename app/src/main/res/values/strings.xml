@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android学习笔记</string>
+    <!--QA页面-->
+    <string name="text_summary_qa">记录开发此应用过程中的一些疑问</string>
 </resources>

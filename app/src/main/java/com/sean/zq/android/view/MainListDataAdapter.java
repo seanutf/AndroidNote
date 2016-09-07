@@ -1,6 +1,7 @@
 package com.sean.zq.android.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -74,18 +75,31 @@ public class MainListDataAdapter extends BaseAdapter{
     }
 
     private void onClickEvent(MainData.MainDataType type) {
+        Intent intent = null;
         switch (type){
             case qa:
+                intent = new Intent(context,QAActivity.class);
+                context.startActivity(intent);
                 break;
             case view:
+                intent = new Intent(context,QAActivity.class);
+                context.startActivity(intent);
                 break;
             case launch:
+                intent = new Intent(context,QAActivity.class);
+                context.startActivity(intent);
                 break;
             case layout:
+                intent = new Intent(context,QAActivity.class);
+                context.startActivity(intent);
                 break;
             case animation:
+                intent = new Intent(context,QAActivity.class);
+                context.startActivity(intent);
                 break;
             case thread:
+                intent = new Intent(context,QAActivity.class);
+                context.startActivity(intent);
                 break;
             default:
                 break;
