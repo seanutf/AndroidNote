@@ -12,12 +12,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        listView = (ListView)findViewById(R.id.main_list);
+        ListView listView = (ListView)findViewById(R.id.main_list);
         MainListDataAdapter adapter = new MainListDataAdapter(getBaseContext(),getMainDataList());
         listView.setAdapter(adapter);
 
