@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by sks on 2016/9/7.
+ * Created by sean on 2016/9/7.
  */
 public class QAActivity extends AppCompatActivity{
     @Override

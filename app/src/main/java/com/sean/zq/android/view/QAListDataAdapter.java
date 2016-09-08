@@ -1,14 +1,18 @@
 package com.sean.zq.android.view;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import com.sean.note.android.R;
 
 import java.util.List;
 
 /**
- * Created by sks on 2016/9/7.
+ * Created by sean on 2016/9/7.
  */
 public class QAListDataAdapter extends BaseAdapter{
 
@@ -45,7 +49,21 @@ public class QAListDataAdapter extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
-        return null;
+        QAMetaViewHolder holder = null;
+        if(convertView == null){
+            holder = new QAMetaViewHolder();
+            convertView = View.inflate(context, R.layout.qa_list_item,null);
+            holder.title = (TextView) convertView.findViewById(R.id.title);
+            convertView.setTag(holder);
+        } else {
+            holder = (QAMetaViewHolder)convertView.getTag();
+        }
+        if(list != null && list.size() > 0) {
+            final String meta = list.get(position);
+            if (!TextUtils.isEmpty(meta)) {
+                holder.title.setText(meta);
+            }
+        }
+        return convertView;
     }
 }
