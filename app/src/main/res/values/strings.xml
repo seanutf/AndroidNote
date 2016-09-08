@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">Android学习笔记</string>
+    <!--主列表页面-->
+    <string name="text_qa_summary_main">开发此应用时遇到的问题</string>
+    <string name="text_qa_text_main">问题</string>
+    <string name="text_view_summary_main">包括Activity和Fragment的学习</string>
+    <string name="text_view_text_main">View</string>
+    <string name="text_widget_summary_main">Layout和Widget的学习</string>
+    <string name="text_widget_text_main">Widget</string>
+    <string name="text_launch_summary_main">App启动相关的学习</string>
+    <string name="text_launch_text_main">应用启动</string>
+    <string name="text_thread_summary_main">Android中线程的学习</string>
+    <string name="text_thread_text_main">线程</string>
+    <string name="text_animation_summary_main">Android中动画的学习</string>
+    <string name="text_animation_text_main">动画</string>
     <!--QA页面-->
     <string name="text_summary_qa">记录开发此应用过程中的一些疑问</string>
+    <string name="text_no_get_activity_qa">为什么继承自AppCompatActivity没有getActivity()方法？</string>
 </resources>

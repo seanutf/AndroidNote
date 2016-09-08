@@ -26,7 +26,7 @@ public class QAActivity extends AppCompatActivity{
     private List getQAMetaList() {
         List<String> list = new ArrayList<String>();
         //创建对象
-        String qaGetActivity = new String("为什么继承自AppCompatActivity没有getActivity()方法？");
+        String qaGetActivity = getString(R.string.text_no_get_activity_qa);
 
         //添加对象到列表
         list.add(qaGetActivity);

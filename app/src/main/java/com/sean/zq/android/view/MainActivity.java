@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
     private List getMainDataList() {
         List<MainData> list = new ArrayList<MainData>();
         //创建对象
-        MainData mainDataQA = new MainData("问题",MainData.MainDataType.qa,"开发此应用时遇到的问题");
-        MainData mainDataView = new MainData("View",MainData.MainDataType.view,"包括View和ViewGroup的学习");
-        MainData mainDataLayout = new MainData("Layout",MainData.MainDataType.layout,"Layout的学习");
-        MainData mainDataLaunch = new MainData("应用启动",MainData.MainDataType.launch,"App启动相关的学习");
-        MainData mainDataThread = new MainData("线程",MainData.MainDataType.thread,"Android中线程的学习");
-        MainData mainDataAnimation = new MainData("动画",MainData.MainDataType.animation,"Android中动画的学习");
+        MainData mainDataQA = new MainData(getString(R.string.text_qa_text_main), MainData.MainDataType.qa, getString(R.string.text_qa_summary_main));
+        MainData mainDataView = new MainData(getString(R.string.text_view_text_main), MainData.MainDataType.view, getString(R.string.text_view_summary_main));
+        MainData mainDataLayout = new MainData(getString(R.string.text_widget_text_main), MainData.MainDataType.layout, getString(R.string.text_widget_summary_main));
+        MainData mainDataLaunch = new MainData(getString(R.string.text_launch_text_main), MainData.MainDataType.launch, getString(R.string.text_launch_summary_main));
+        MainData mainDataThread = new MainData(getString(R.string.text_thread_text_main), MainData.MainDataType.thread, getString(R.string.text_thread_summary_main));
+        MainData mainDataAnimation = new MainData(getString(R.string.text_animation_text_main), MainData.MainDataType.animation, getString(R.string.text_animation_summary_main));
 
         //添加对象到列表
         list.add(mainDataQA);
