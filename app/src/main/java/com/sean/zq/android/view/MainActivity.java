@@ -6,6 +6,7 @@ import android.widget.ListView;
 
 import com.sean.note.android.R;
 import com.sean.zq.android.meta.MainData;
+import com.sean.zq.android.utils.widget.StretchListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ListView listView = (ListView)findViewById(R.id.main_list);
-        MainListDataAdapter adapter = new MainListDataAdapter(this,getMainDataList());
+        StretchListView listView = (StretchListView)findViewById(R.id.main_list);
+        final MainListDataAdapter adapter = new MainListDataAdapter(this,getMainDataList());
         listView.setAdapter(adapter);
 
     }
