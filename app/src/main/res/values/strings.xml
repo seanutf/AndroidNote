@@ -5,6 +5,7 @@
     <string name="text_qa_text_main">问题</string>
     <string name="text_view_summary_main">包括Activity和Fragment的学习</string>
     <string name="text_view_text_main">View</string>
+    <string name="text_view_group_text_main">ViewGroup</string>
     <string name="text_widget_summary_main">Layout和Widget的学习</string>
     <string name="text_widget_text_main">Widget</string>
     <string name="text_launch_summary_main">App启动相关的学习</string>
@@ -13,7 +14,16 @@
     <string name="text_thread_text_main">线程</string>
     <string name="text_animation_summary_main">Android中动画的学习</string>
     <string name="text_animation_text_main">动画</string>
+    <string name="text_barrage_text_main">弹幕练习</string>
+    <string name="text_barrage_summary_main">日！SB运营</string>
     <!--QA页面-->
     <string name="text_summary_qa">记录开发此应用过程中的一些疑问</string>
     <string name="text_no_get_activity_qa">为什么继承自AppCompatActivity没有getActivity()方法？</string>
+    <!--Widget页面-->
+    <string name="text_widget_textview">TextView</string>
+    <!--TextView页面-->
+    <string name="text_view_knowledge_item_0">getTextSize()和setTextSize()</string>
+    <string name="text_view_knowledge_item_1">伪弹幕的实现</string>
+    <!--TextViewDetail页面-->
+    <string name="text_view_detail_content_0">该页面的代码展示了对setText设置不同值时的效果</string>
 </resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_size_sp">17sp</dimen>
+    <dimen name="font_size_dp">17dp</dimen>
+    <dimen name="font_size_px">34px</dimen>
+</resources>

@@ -1,4 +1,4 @@
-package com.sean.zq.android.view;
+package com.sean.zq.android.view.qa;
 
 import android.widget.TextView;
 

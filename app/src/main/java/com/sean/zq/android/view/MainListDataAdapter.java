@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import com.sean.note.android.R;
 import com.sean.zq.android.meta.MainData;
+import com.sean.zq.android.view.qa.QAActivity;
+import com.sean.zq.android.view.widget.WidgetActivity;
+import com.sean.zq.android.view.widget.textview.BarrageActivity;
 
 import java.util.List;
 
@@ -90,7 +93,7 @@ public class MainListDataAdapter extends BaseAdapter{
                 context.startActivity(intent);
                 break;
             case layout:
-                intent = new Intent(context,QAActivity.class);
+                intent = new Intent(context,WidgetActivity.class);
                 context.startActivity(intent);
                 break;
             case animation:

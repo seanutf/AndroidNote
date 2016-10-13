@@ -16,7 +16,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.sean.zq.android.view.QAActivity">
+        <activity android:name="com.sean.zq.android.view.qa.QAActivity">
+        </activity>
+        <activity android:name="com.sean.zq.android.view.widget.textview.BarrageActivity">
+        </activity>
+        <activity android:name="com.sean.zq.android.view.widget.WidgetActivity">
+        </activity>
+        <activity android:name="com.sean.zq.android.view.widget.textview.TextViewActivity">
+        </activity>
+        <activity android:name="com.sean.zq.android.view.widget.textview.TextViewDetailActivity">
         </activity>
     </application>
 
