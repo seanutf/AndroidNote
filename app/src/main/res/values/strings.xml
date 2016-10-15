@@ -29,4 +29,6 @@
     <!--View页面-->
     <string name="text_view_fragment">Fragment</string>
     <string name="text_view_activity">Activity</string>
+    <!--FragmentDemo页面-->
+    <string name="text_fragment_demo_from_api_demo">新建页面该页面Fragment示例仿照ApiDemo</string>
 </resources>
