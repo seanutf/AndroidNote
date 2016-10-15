@@ -26,6 +26,10 @@
         </activity>
         <activity android:name="com.sean.zq.android.view.widget.textview.TextViewDetailActivity">
         </activity>
+        <activity android:name="com.sean.zq.android.view.view.ViewActivity">
+        </activity>
+        <activity android:name="com.sean.zq.android.view.view.fragment.FreagmentDemoActivity">
+        </activity>
     </application>
 
 </manifest>

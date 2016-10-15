@@ -26,4 +26,7 @@
     <string name="text_view_knowledge_item_1">伪弹幕的实现</string>
     <!--TextViewDetail页面-->
     <string name="text_view_detail_content_0">该页面的代码展示了对setText设置不同值时的效果</string>
+    <!--View页面-->
+    <string name="text_view_fragment">Fragment</string>
+    <string name="text_view_activity">Activity</string>
 </resources>
