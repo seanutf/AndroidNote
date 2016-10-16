@@ -30,5 +30,8 @@
     <string name="text_view_fragment">Fragment</string>
     <string name="text_view_activity">Activity</string>
     <!--FragmentDemo页面-->
-    <string name="text_fragment_demo_from_api_demo">新建页面该页面Fragment示例仿照ApiDemo</string>
+    <string name="text_fragment_demo_from_api_demo">ApiDemos中的Fragment示例：在布局中的fragment使用</string>
+    <string name="text_fragment_demo_from_api_demo_back_stack">ApiDemos中的Fragment示例：Fragment后退栈</string>
+    <string name="new_fragment">New fragment</string>
+    <string name="hello_world"><b>Hello, <i>World!</i></b></string>
 </resources>

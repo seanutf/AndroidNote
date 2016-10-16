@@ -18,12 +18,21 @@ public class FragmentDemoActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_demo);
-        Fragment f = new Fragment();
-                TextView btnApiDemo = (TextView) findViewById(R.id.btn_api_demo);
+
+        TextView btnApiDemo = (TextView) findViewById(R.id.btn_api_demo);
         btnApiDemo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(FragmentDemoActivity.this,FragmentLayout.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView btnApiDemoBackStack = (TextView) findViewById(R.id.btn_api_demo_back_stack);
+        btnApiDemoBackStack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FragmentDemoActivity.this,FragmentStack.class);
                 startActivity(intent);
             }
         });
