@@ -6,9 +6,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.sean.note.android.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by sean on 2016/10/15.
@@ -19,22 +23,15 @@ public class FragmentDemoActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_demo);
 
-        TextView btnApiDemo = (TextView) findViewById(R.id.btn_api_demo);
-        btnApiDemo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(FragmentDemoActivity.this,FragmentLayout.class);
-                startActivity(intent);
-            }
-        });
+        ListView listView = (ListView) findViewById(R.id.list_activity_fragment);
+        FragmentDataApater apater = new FragmentDataApater(this,getFragmentData());
+        listView.setAdapter(apater);
+    }
 
-        TextView btnApiDemoBackStack = (TextView) findViewById(R.id.btn_api_demo_back_stack);
-        btnApiDemoBackStack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(FragmentDemoActivity.this,FragmentStack.class);
-                startActivity(intent);
-            }
-        });
+    private List<String> getFragmentData() {
+        List<String> list = new ArrayList<String>();
+        list.add(getString(R.string.text_fragment_demo_from_api_demo));
+        list.add(getString(R.string.text_fragment_demo_from_api_demo_back_stack));
+        return list;
     }
 }
