@@ -28,7 +28,7 @@ public class WidgetActivity extends AppCompatActivity{
         ListView viewGroupListView = (ListView) findViewById(R.id.list_activity_view_group);
 
         List<WidgetMeta> viewList = getWidgetData();
-        List<WidgetMeta> viewGroupList = getViewGroupData();
+        List<WidgetMeta> viewGroupList =  getViewGroupData();
 
         if(viewList != null && viewList.size() > 0){
             viewTab.setVisibility(View.VISIBLE);
@@ -50,8 +50,10 @@ public class WidgetActivity extends AppCompatActivity{
     private List<WidgetMeta> getWidgetData(){
         List<WidgetMeta> list = new ArrayList<WidgetMeta>();
         WidgetMeta tvMeta = new WidgetMeta(getString(R.string.text_widget_textview), WidgetMeta.WidgetMetaType.tv);
+        WidgetMeta svMeta = new WidgetMeta(getString(R.string.text_widget_surfaceview), WidgetMeta.WidgetMetaType.sv);
 
         list.add(tvMeta);
+        list.add(svMeta);
         return list;
     }
 

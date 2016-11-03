@@ -36,6 +36,8 @@
         </activity>
         <activity android:name="com.sean.zq.android.view.view.fragment.FragmentStack">
         </activity>
+        <activity android:name="com.sean.zq.android.view.widget.surfaceview.SurfaceViewActivity">
+        </activity>
     </application>
 
 </manifest>

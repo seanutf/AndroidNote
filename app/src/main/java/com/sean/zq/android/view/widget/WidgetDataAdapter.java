@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.sean.note.android.R;
 import com.sean.zq.android.meta.WidgetMeta;
+import com.sean.zq.android.view.widget.surfaceview.SurfaceViewActivity;
 import com.sean.zq.android.view.widget.textview.TextViewActivity;
 
 import java.util.List;
@@ -75,6 +76,10 @@ public class WidgetDataAdapter extends BaseAdapter{
         switch (type){
             case tv:
                 intent = new Intent(context,TextViewActivity.class);
+                context.startActivity(intent);
+                break;
+            case sv:
+                intent = new Intent(context,SurfaceViewActivity.class);
                 context.startActivity(intent);
                 break;
             default:
