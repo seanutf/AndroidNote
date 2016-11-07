@@ -30,6 +30,7 @@ public class TextViewActivity extends AppCompatActivity{
         List<String> list = new ArrayList<String>();
         list.add(getString(R.string.text_view_knowledge_item_0));
         list.add(getString(R.string.text_view_knowledge_item_1));
+        list.add(getString(R.string.text_view_knowledge_item_2));
         return list;
     }
 }

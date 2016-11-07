@@ -26,11 +26,32 @@ public class TextViewDetailActivity extends AppCompatActivity{
         int type = getIntent().getIntExtra(TextViewActivity.REQUEST_TEXTVIEW_DETAIL_ACTIVITY_TYPE_ONE,-1);
         switch(type){
             case 0:
+                //getTextSize()和setTextSize()内容探究
                 initGetSetTextViewSizeView();
+                break;
+            case 1:
+                //跑马灯问题的确定
+                initMarqueeView();
                 break;
             default:
                 break;
         }
+    }
+
+    private void initMarqueeView() {
+        View view = getLayoutInflater().inflate(R.layout.activity_content_textview_marquee,null);
+        TextView tvContent = (TextView)view.findViewById(R.id.content);
+        TextView tvWidthMatchParent = (TextView)view.findViewById(R.id.tv_width_match_parent);
+        TextView tvWidthWrapContent = (TextView)view.findViewById(R.id.tv_width_wrap_content);
+        TextView tvWidth180 = (TextView)view.findViewById(R.id.tv_width_180);
+        tvContent.setText(getString(R.string.text_view_detail_content_1));
+        tvWidthMatchParent.setText(getString(R.string.text_view_detail_content_marquee_long));
+        tvWidthMatchParent.setSelected(true);
+        tvWidthWrapContent.setText(getString(R.string.text_view_detail_content_marquee_long));
+        tvWidthWrapContent.setSelected(true);
+        tvWidth180.setText(getString(R.string.text_view_detail_content_marquee_long));
+        tvWidthWrapContent.setSelected(true);
+        rootLayout.addView(view);
     }
 
     private void initGetSetTextViewSizeView() {
