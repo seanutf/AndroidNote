@@ -1,6 +1,5 @@
 package com.sean.zq.android.view.widget.textview;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -50,7 +49,7 @@ public class TextViewDetailActivity extends AppCompatActivity{
         tvWidthWrapContent.setText(getString(R.string.text_view_detail_content_marquee_long));
         tvWidthWrapContent.setSelected(true);
         tvWidth180.setText(getString(R.string.text_view_detail_content_marquee_long));
-        tvWidthWrapContent.setSelected(true);
+        tvWidth180.setSelected(true);
         rootLayout.addView(view);
     }
 
