@@ -26,11 +26,17 @@
     <string name="text_view_knowledge_item_0">getTextSize()和setTextSize()</string>
     <string name="text_view_knowledge_item_1">伪弹幕的实现</string>
     <string name="text_view_knowledge_item_2">跑马灯效果实现</string>
+    <string name="text_view_knowledge_item_3">阴影效果实现</string>
+    <string name="text_view_knowledge_item_4">html超链接</string>
     <!--TextViewDetail页面-->
     <string name="text_view_detail_content_0">该页面的代码展示了对setText设置不同值时的效果</string>
     <string name="text_view_detail_content_1">该页面的代码展示了对TextView设置跑马灯效果的正确方式和不同场景</string>
+    <string name="text_view_detail_content_2">该页面的代码展示了对TextView设置阴影效果</string>
+    <string name="text_view_detail_content_3">该页面的代码展示了对TextView设置html超链接效果</string>
     <string name="text_view_detail_content_marquee_long">这段文本是一段长测试文本，测试TextView的跑马灯效果，探究打开这种效果的正确方式和方法</string>
     <string name="text_view_detail_content_marquee_short">这段文本是一段短测试文本</string>
+    <string name="text_view_detail_content_shadow">这段文本是一段短测试文本</string>
+    <string name="text_view_detail_content_html">这段文本是一段短测试文本</string>
     <!--View页面-->
     <string name="text_view_fragment">Fragment</string>
     <string name="text_view_activity">Activity</string>

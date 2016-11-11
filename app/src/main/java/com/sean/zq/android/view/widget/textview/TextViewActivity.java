@@ -31,6 +31,8 @@ public class TextViewActivity extends AppCompatActivity{
         list.add(getString(R.string.text_view_knowledge_item_0));
         list.add(getString(R.string.text_view_knowledge_item_1));
         list.add(getString(R.string.text_view_knowledge_item_2));
+        list.add(getString(R.string.text_view_knowledge_item_3));
+        list.add(getString(R.string.text_view_knowledge_item_4));
         return list;
     }
 }

@@ -81,6 +81,16 @@ public class TextViewAdapter extends BaseAdapter{
                 intent.putExtra(TextViewActivity.REQUEST_TEXTVIEW_DETAIL_ACTIVITY_TYPE_ONE,1);
                 context.startActivity(intent);
                 break;
+            case 3:
+                intent = new Intent(context,TextViewDetailActivity.class);
+                intent.putExtra(TextViewActivity.REQUEST_TEXTVIEW_DETAIL_ACTIVITY_TYPE_ONE,2);
+                context.startActivity(intent);
+                break;
+            case 4:
+                intent = new Intent(context,TextViewDetailActivity.class);
+                intent.putExtra(TextViewActivity.REQUEST_TEXTVIEW_DETAIL_ACTIVITY_TYPE_ONE,3);
+                context.startActivity(intent);
+                break;
             default:
                 break;
         }
