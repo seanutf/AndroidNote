@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         MainData mainDataLaunch = new MainData(getString(R.string.text_launch_text_main), MainData.MainDataType.launch, getString(R.string.text_launch_summary_main));
         MainData mainDataThread = new MainData(getString(R.string.text_thread_text_main), MainData.MainDataType.thread, getString(R.string.text_thread_summary_main));
         MainData mainDataAnimation = new MainData(getString(R.string.text_animation_text_main), MainData.MainDataType.animation, getString(R.string.text_animation_summary_main));
-        MainData mainDataShare = new MainData(getString(R.string.text_share_text_main), MainData.MainDataType.animation, getString(R.string.text_share_summary_main));
+        MainData mainDataShare = new MainData(getString(R.string.text_share_text_main), MainData.MainDataType.share, getString(R.string.text_share_summary_main));
 
         //添加对象到列表
         list.add(mainDataQA);

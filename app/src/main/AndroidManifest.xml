@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sean.note.android">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -37,6 +38,21 @@
         <activity android:name="com.sean.zq.android.view.view.fragment.FragmentStack">
         </activity>
         <activity android:name="com.sean.zq.android.view.widget.surfaceview.SurfaceViewActivity">
+        </activity>
+        <activity android:name="com.sean.zq.android.view.share.ShareActivity">
+            <!-- 处理单张图片的Intent -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+
+            <!-- 处理多张图片的Intent -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
         </activity>
         <receiver android:name="com.sean.zq.android.view.MBroadcastReceiver">
             <intent-filter>
