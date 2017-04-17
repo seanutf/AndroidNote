@@ -45,5 +45,6 @@ public class MainData {
         launch,
         thread,
         animation,
+        share,
     }
 }

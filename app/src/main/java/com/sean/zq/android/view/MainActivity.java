@@ -2,7 +2,6 @@ package com.sean.zq.android.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ListView;
 
 import com.sean.note.android.R;
 import com.sean.zq.android.meta.MainData;
@@ -19,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         StretchListView listView = (StretchListView)findViewById(R.id.main_list);
         final MainListDataAdapter adapter = new MainListDataAdapter(this,getMainDataList());
-        listView.setAdapter(adapter);
-
+        if(listView !=null)
+            listView.setAdapter(adapter);
     }
 
-    private List getMainDataList() {
+    private List<MainData> getMainDataList() {
         List<MainData> list = new ArrayList<MainData>();
         //创建对象
         MainData mainDataQA = new MainData(getString(R.string.text_qa_text_main), MainData.MainDataType.qa, getString(R.string.text_qa_summary_main));
@@ -32,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         MainData mainDataLaunch = new MainData(getString(R.string.text_launch_text_main), MainData.MainDataType.launch, getString(R.string.text_launch_summary_main));
         MainData mainDataThread = new MainData(getString(R.string.text_thread_text_main), MainData.MainDataType.thread, getString(R.string.text_thread_summary_main));
         MainData mainDataAnimation = new MainData(getString(R.string.text_animation_text_main), MainData.MainDataType.animation, getString(R.string.text_animation_summary_main));
+        MainData mainDataShare = new MainData(getString(R.string.text_share_text_main), MainData.MainDataType.animation, getString(R.string.text_share_summary_main));
 
         //添加对象到列表
         list.add(mainDataQA);
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(mainDataLaunch);
         list.add(mainDataThread);
         list.add(mainDataAnimation);
+        list.add(mainDataShare);
 
         return list;
     }

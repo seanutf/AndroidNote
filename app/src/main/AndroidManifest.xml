@@ -38,6 +38,11 @@
         </activity>
         <activity android:name="com.sean.zq.android.view.widget.surfaceview.SurfaceViewActivity">
         </activity>
+        <receiver android:name="com.sean.zq.android.view.MBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
