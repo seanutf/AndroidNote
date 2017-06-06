@@ -24,6 +24,7 @@ import com.sean.note.android.R;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Created by sks on 2017/4/17.
@@ -38,6 +39,7 @@ public class ShareActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share_system);
+        UUID.randomUUID().toString();
         initView();
     }
 
