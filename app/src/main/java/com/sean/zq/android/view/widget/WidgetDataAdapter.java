@@ -12,6 +12,7 @@ import com.sean.note.android.R;
 import com.sean.zq.android.meta.WidgetMeta;
 import com.sean.zq.android.view.widget.surfaceview.SurfaceViewActivity;
 import com.sean.zq.android.view.widget.textview.TextViewActivity;
+import com.sean.zq.android.view.widget.toolbar.ToolBarActivity;
 
 import java.util.List;
 
@@ -80,6 +81,10 @@ public class WidgetDataAdapter extends BaseAdapter{
                 break;
             case sv:
                 intent = new Intent(context,SurfaceViewActivity.class);
+                context.startActivity(intent);
+                break;
+            case tb:
+                intent = new Intent(context,ToolBarActivity.class);
                 context.startActivity(intent);
                 break;
             default:

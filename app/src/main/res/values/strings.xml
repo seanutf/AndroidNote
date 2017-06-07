@@ -24,6 +24,7 @@
     <!--Widget页面-->
     <string name="text_widget_textview">TextView</string>
     <string name="text_widget_surfaceview">SurfaceView</string>
+    <string name="text_widget_toolbar">ToolBar</string>
     <!--TextView页面-->
     <string name="text_view_knowledge_item_0">getTextSize()和setTextSize()</string>
     <string name="text_view_knowledge_item_1">伪弹幕的实现</string>
