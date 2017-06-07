@@ -95,34 +95,34 @@ public class HorizontalProgressBarWithNumber extends ProgressBar {
 
         mTextColor = attributes
                 .getColor(
-                        R.styleable.HorizontalProgressBarWithNumber_progress_text_color,
+                        R.styleable.HorizontalProgressBarWithNumber_number_progress_text_color,
                         DEFAULT_TEXT_COLOR);
         mTextSize = (int) attributes.getDimension(
-                R.styleable.HorizontalProgressBarWithNumber_progress_text_size,
+                R.styleable.HorizontalProgressBarWithNumber_number_progress_text_size,
                 mTextSize);
 
         mReachedBarColor = attributes
                 .getColor(
-                        R.styleable.HorizontalProgressBarWithNumber_progress_reached_color,
+                        R.styleable.HorizontalProgressBarWithNumber_number_progress_reached_color,
                         mTextColor);
         mUnReachedBarColor = attributes
                 .getColor(
-                        R.styleable.HorizontalProgressBarWithNumber_progress_unreached_color,
+                        R.styleable.HorizontalProgressBarWithNumber_number_progress_unreached_color,
                         DEFAULT_COLOR_UNREACHED_COLOR);
         mReachedProgressBarHeight = (int) attributes
                 .getDimension(
-                        R.styleable.HorizontalProgressBarWithNumber_progress_reached_bar_height,
+                        R.styleable.HorizontalProgressBarWithNumber_number_progress_reached_bar_height,
                         mReachedProgressBarHeight);
         mUnReachedProgressBarHeight = (int) attributes
                 .getDimension(
-                        R.styleable.HorizontalProgressBarWithNumber_progress_unreached_bar_height,
+                        R.styleable.HorizontalProgressBarWithNumber_number_progress_unreached_bar_height,
                         mUnReachedProgressBarHeight);
         mTextOffset = (int) attributes
                 .getDimension(
-                        R.styleable.HorizontalProgressBarWithNumber_progress_text_offset,
+                        R.styleable.HorizontalProgressBarWithNumber_number_progress_text_offset,
                         mTextOffset);
 
-        int textVisible = attributes.getInt(R.styleable.HorizontalProgressBarWithNumber_progress_text_visibility,
+        int textVisible = attributes.getInt(R.styleable.HorizontalProgressBarWithNumber_number_progress_text_visibility,
                 VISIBLE);
         if (textVisible != VISIBLE) {
             mIfDrawText = false;
