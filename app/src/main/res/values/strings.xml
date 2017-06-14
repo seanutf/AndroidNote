@@ -28,6 +28,8 @@
     <!--ToolBar页面-->
     <string name="text_action_favorite">favorite</string>
     <string name="text_action_settings">settings</string>
+    <string name="text_action_search">search</string>
+    <string name="text_action_share">share</string>
     <!--TextView页面-->
     <string name="text_view_knowledge_item_0">getTextSize()和setTextSize()</string>
     <string name="text_view_knowledge_item_1">伪弹幕的实现</string>

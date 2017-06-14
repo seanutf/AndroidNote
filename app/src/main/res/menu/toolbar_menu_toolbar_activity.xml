@@ -5,6 +5,17 @@
       tools:context="com.sean.zq.android.view.widget.toolbar.ToolBarActivity">
     <!-- "Mark Favorite", should appear as action button if possible -->
     <item
+        android:id="@+id/action_search"
+        android:icon="@mipmap/ic_launcher"
+        android:title="@string/text_action_search"
+        app:showAsAction="ifRoom|collapseActionView"
+        android:actionViewClass="android.support.v7.widget.SearchView" />
+    <item
+        android:id="@+id/action_share"
+        android:title="@string/text_action_share"
+        app:showAsAction="ifRoom"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"/>
+    <item
         android:id="@+id/action_favorite"
         android:icon="@mipmap/ic_launcher"
         android:title="@string/text_action_favorite"
