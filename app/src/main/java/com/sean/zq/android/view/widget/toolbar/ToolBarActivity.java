@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.sean.note.android.R;
+import com.sean.zq.android.utils.UrlUtil;
 
 /**
  * Created by sean on 2017/6/6.
@@ -27,7 +28,7 @@ public class ToolBarActivity extends AppCompatActivity {
         myToolbar.setSubtitle("副标题");
         setSupportActionBar(myToolbar);
         ActionBar ab = getSupportActionBar();
-
+        UrlUtil.makeUrl("qq");
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
     }
