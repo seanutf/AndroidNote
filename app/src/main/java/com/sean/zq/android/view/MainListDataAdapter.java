@@ -11,6 +11,7 @@ import com.sean.note.android.R;
 import com.sean.zq.android.meta.MainData;
 import com.sean.zq.android.view.qa.QAActivity;
 import com.sean.zq.android.view.share.ShareActivity;
+import com.sean.zq.android.view.thread.ThreadActivity;
 import com.sean.zq.android.view.view.ViewActivity;
 import com.sean.zq.android.view.widget.WidgetActivity;
 
@@ -102,7 +103,7 @@ public class MainListDataAdapter extends BaseAdapter{
                 context.startActivity(intent);
                 break;
             case thread:
-                intent = new Intent(context,QAActivity.class);
+                intent = new Intent(context,ThreadActivity.class);
                 context.startActivity(intent);
                 break;
             case share:
