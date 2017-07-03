@@ -32,6 +32,8 @@
         </activity>
         <activity android:name="com.sean.zq.android.view.view.fragment.FragmentDemoActivity">
         </activity>
+        <activity android:name="com.sean.zq.android.utils.asynctask.MyAsyncTaskLoaderActivity">
+        </activity>
         <activity android:name="com.sean.zq.android.view.view.fragment.FragmentLayout">
         </activity>
         <activity android:name="com.sean.zq.android.view.view.fragment.FragmentLayout$DetailsActivity">

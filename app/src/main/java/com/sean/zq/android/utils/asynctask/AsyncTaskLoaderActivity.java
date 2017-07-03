@@ -46,14 +46,20 @@ import java.util.List;
  */
 
 public class AsyncTaskLoaderActivity extends AppCompatActivity {
+
+    private static final String TAG = "AsyncTaskLoaderActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(TAG, "AsyncTaskLoaderActivity is onCreate");
         FragmentManager fm = getFragmentManager();
         // Create the list fragment and add it as our sole content.
         if (fm.findFragmentById(android.R.id.content) == null) {
             AppListFragment list = new AppListFragment();
+            Log.i(TAG, "AppListFragment is init");
             fm.beginTransaction().add(android.R.id.content, list).commit();
+            Log.i(TAG, "FragmentManager is commit AppListFragment");
         }
     }
 //BEGIN_INCLUDE(loader)
@@ -123,6 +129,7 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
         private final Collator sCollator = Collator.getInstance();
         @Override
         public int compare(AppEntry object1, AppEntry object2) {
+            //Log.i(TAG, "Comprator compare object1 to object2");
             return sCollator.compare(object1.getLabel(), object2.getLabel());
         }
     };
@@ -134,10 +141,12 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
         final Configuration mLastConfiguration = new Configuration();
         int mLastDensity;
         boolean applyNewConfig(Resources res) {
+            Log.i(TAG, "InterestingConfigChanges is have NewConfig");
             int configChanges = mLastConfiguration.updateFrom(res.getConfiguration());
             boolean densityChanged = mLastDensity != res.getDisplayMetrics().densityDpi;
             if (densityChanged || (configChanges&(ActivityInfo.CONFIG_LOCALE
                     |ActivityInfo.CONFIG_UI_MODE|ActivityInfo.CONFIG_SCREEN_LAYOUT)) != 0) {
+                Log.i(TAG, "InterestingConfigChanges apply NewConfig");
                 mLastDensity = res.getDisplayMetrics().densityDpi;
                 return true;
             }
@@ -151,20 +160,24 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
     public static class PackageIntentReceiver extends BroadcastReceiver {
         final AppListLoader mLoader;
         public PackageIntentReceiver(AppListLoader loader) {
+            Log.i(TAG, "PackageIntentReceiver is init");
             mLoader = loader;
             IntentFilter filter = new IntentFilter(Intent.ACTION_PACKAGE_ADDED);
             filter.addAction(Intent.ACTION_PACKAGE_REMOVED);
             filter.addAction(Intent.ACTION_PACKAGE_CHANGED);
             filter.addDataScheme("package");
+            Log.i(TAG, "PackageIntentReceiver is have  filter IntentFilter");
             mLoader.getContext().registerReceiver(this, filter);
             // Register for events related to sdcard installation.
             IntentFilter sdFilter = new IntentFilter();
             sdFilter.addAction(Intent.ACTION_EXTERNAL_APPLICATIONS_AVAILABLE);
             sdFilter.addAction(Intent.ACTION_EXTERNAL_APPLICATIONS_UNAVAILABLE);
+            Log.i(TAG, "PackageIntentReceiver is have  sdFilter IntentFilter");
             mLoader.getContext().registerReceiver(this, sdFilter);
         }
         @Override public void onReceive(Context context, Intent intent) {
             // Tell the loader about the change.
+            Log.i(TAG, "PackageIntentReceiver is onReceive");
             mLoader.onContentChanged();
         }
     }
@@ -178,6 +191,7 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
         PackageIntentReceiver mPackageObserver;
         public AppListLoader(Context context) {
             super(context);
+            Log.i(TAG, "AppListLoader is init");
             // Retrieve the package manager for later use; note we don't
             // use 'context' directly but instead the save global application
             // context returned by getContext().
@@ -190,6 +204,7 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
          */
         @Override public List<AppEntry> loadInBackground() {
             // Retrieve all known applications.
+            Log.i(TAG, "AppListLoader is start loadInBackground");
             List<ApplicationInfo> apps = mPm.getInstalledApplications(
                     PackageManager.GET_UNINSTALLED_PACKAGES |
                             PackageManager.GET_DISABLED_COMPONENTS);
@@ -207,6 +222,7 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
             // Sort the list.
             Collections.sort(entries, ALPHA_COMPARATOR);
             // Done!
+            Log.i(TAG, "AppListLoader is end loadInBackground");
             return entries;
         }
         /**
@@ -215,10 +231,13 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
          * here just adds a little more logic.
          */
         @Override public void deliverResult(List<AppEntry> apps) {
+            Log.i(TAG, "AppListLoader is deliverResult");
             if (isReset()) {
                 // An async query came in while the loader is stopped.  We
                 // don't need the result.
+                Log.i(TAG, "AppListLoader is deliverResult  isReset");
                 if (apps != null) {
+                    Log.i(TAG, "AppListLoader is deliverResult  onReleaseResources");
                     onReleaseResources(apps);
                 }
             }
@@ -227,12 +246,14 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
             if (isStarted()) {
                 // If the Loader is currently started, we can immediately
                 // deliver its results.
+                Log.i(TAG, "AppListLoader is deliverResult  isStarted");
                 super.deliverResult(apps);
             }
             // At this point we can release the resources associated with
             // 'oldApps' if needed; now that the new result is delivered we
             // know that it is no longer in use.
             if (oldApps != null) {
+                Log.i(TAG, "AppListLoader is deliverResult  oldApps");
                 onReleaseResources(oldApps);
             }
         }
@@ -240,13 +261,16 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
          * Handles a request to start the Loader.
          */
         @Override protected void onStartLoading() {
+            Log.i(TAG, "AppListLoader is onStartLoading");
             if (mApps != null) {
                 // If we currently have a result available, deliver it
                 // immediately.
+                Log.i(TAG, "AppListLoader is onStartLoading deliverResult");
                 deliverResult(mApps);
             }
             // Start watching for changes in the app data.
             if (mPackageObserver == null) {
+                Log.i(TAG, "AppListLoader is onStartLoading new mPackageObserver");
                 mPackageObserver = new PackageIntentReceiver(this);
             }
             // Has something interesting in the configuration changed since we
@@ -255,6 +279,7 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
             if (takeContentChanged() || mApps == null || configChange) {
                 // If the data has changed since the last time it was loaded
                 // or is not currently available, start a load.
+                Log.i(TAG, "AppListLoader is onStartLoading forceLoad");
                 forceLoad();
             }
         }
@@ -263,6 +288,8 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
          */
         @Override protected void onStopLoading() {
             // Attempt to cancel the current load task if possible.
+            Log.i(TAG, "AppListLoader is onStopLoading");
+            Log.i(TAG, "AppListLoader is onStopLoading cancelLoad");
             cancelLoad();
         }
         /**
@@ -270,8 +297,10 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
          */
         @Override public void onCanceled(List<AppEntry> apps) {
             super.onCanceled(apps);
+            Log.i(TAG, "AppListLoader is onCanceled");
             // At this point we can release the resources associated with 'apps'
             // if needed.
+            Log.i(TAG, "AppListLoader is onCanceled  onReleaseResources");
             onReleaseResources(apps);
         }
         /**
@@ -279,16 +308,20 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
          */
         @Override protected void onReset() {
             super.onReset();
+            Log.i(TAG, "AppListLoader is onReset");
             // Ensure the loader is stopped
+            Log.i(TAG, "AppListLoader is onReset  onStopLoading");
             onStopLoading();
             // At this point we can release the resources associated with 'apps'
             // if needed.
             if (mApps != null) {
+                Log.i(TAG, "AppListLoader is onReset  onReleaseResources");
                 onReleaseResources(mApps);
                 mApps = null;
             }
             // Stop monitoring for changes.
             if (mPackageObserver != null) {
+                Log.i(TAG, "AppListLoader is onReset  unregisterReceiver");
                 getContext().unregisterReceiver(mPackageObserver);
                 mPackageObserver = null;
             }
@@ -298,6 +331,7 @@ public class AsyncTaskLoaderActivity extends AppCompatActivity {
          * with an actively loaded data set.
          */
         protected void onReleaseResources(List<AppEntry> apps) {
+            Log.i(TAG, "AppListLoader is onReleaseResources");
             // For a simple List<> there is nothing to do.  For something
             // like a Cursor, we would close it here.
         }

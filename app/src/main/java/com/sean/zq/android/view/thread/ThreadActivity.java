@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.sean.note.android.R;
 import com.sean.zq.android.utils.asynctask.AsyncTaskLoaderActivity;
+import com.sean.zq.android.utils.asynctask.MyAsyncTaskLoaderActivity;
 
 /**
  * Created by sks on 2017/6/29.
@@ -16,17 +17,24 @@ import com.sean.zq.android.utils.asynctask.AsyncTaskLoaderActivity;
 
 public class ThreadActivity extends AppCompatActivity {
 
-    Button btnJumpThread, btnJumpAsync;
+    Button btnJumpThread, btnJumpAsync, btnJumpMyAsync;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout_thread);
         btnJumpThread = (Button) findViewById(R.id.btn_jump_thread);
         btnJumpAsync = (Button) findViewById(R.id.btn_jump_async);
+        btnJumpMyAsync = (Button) findViewById(R.id.btn_jump_my_async);
         btnJumpAsync.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ThreadActivity.this, AsyncTaskLoaderActivity.class));
+            }
+        });
+        btnJumpMyAsync.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ThreadActivity.this, MyAsyncTaskLoaderActivity.class));
             }
         });
     }
