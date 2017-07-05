@@ -33,6 +33,11 @@
     <!--Thread页面-->
     <string name="text_jump_thread">跳转到线程</string>
     <string name="text_jump_async">跳转到异步</string>
+    <!--Permission页面-->
+    <string name="text_permission_summary">该页面展示在Android 6.0以上平台上应用获取运行时权限的最佳实践，点击任意按钮获取权限</string>
+    <string name="text_permission_get_camera">点击获取相机权限</string>
+    <string name="text_permission_get_location">点击获取定位权限</string>
+    <string name="text_permission_get_contacts">点击获取通讯录权限</string>
     <!--TextView页面-->
     <string name="text_view_knowledge_item_0">getTextSize()和setTextSize()</string>
     <string name="text_view_knowledge_item_1">伪弹幕的实现</string>
