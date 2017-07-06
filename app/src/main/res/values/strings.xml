@@ -14,8 +14,10 @@
     <string name="text_thread_text_main">线程</string>
     <string name="text_animation_summary_main">Android中动画的学习</string>
     <string name="text_share_summary_main">添加应用到系统分享列表和调用系统分享</string>
+    <string name="text_permission_summary_main">动态获取权限的适配</string>
     <string name="text_animation_text_main">动画</string>
     <string name="text_share_text_main">分享</string>
+    <string name="text_permission_text_main">权限</string>
     <string name="text_barrage_text_main">弹幕练习</string>
     <string name="text_barrage_summary_main">日！SB运营</string>
     <!--QA页面-->
@@ -38,6 +40,8 @@
     <string name="text_permission_get_camera">点击获取相机权限</string>
     <string name="text_permission_get_location">点击获取定位权限</string>
     <string name="text_permission_get_contacts">点击获取通讯录权限</string>
+    <string name="text_permission_get_storage">点击获取内部存储权限</string>
+    <string name="text_permission_get_all">点击获取全部权限</string>
     <!--TextView页面-->
     <string name="text_view_knowledge_item_0">getTextSize()和setTextSize()</string>
     <string name="text_view_knowledge_item_1">伪弹幕的实现</string>

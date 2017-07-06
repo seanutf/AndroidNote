@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.sean.note.android.R;
 import com.sean.zq.android.meta.MainData;
+import com.sean.zq.android.view.permission.PermissionActivity;
 import com.sean.zq.android.view.qa.QAActivity;
 import com.sean.zq.android.view.share.ShareActivity;
 import com.sean.zq.android.view.thread.ThreadActivity;
@@ -108,6 +109,10 @@ public class MainListDataAdapter extends BaseAdapter{
                 break;
             case share:
                 intent = new Intent(context,ShareActivity.class);
+                context.startActivity(intent);
+                break;
+            case permission:
+                intent = new Intent(context, PermissionActivity.class);
                 context.startActivity(intent);
                 break;
             default:
