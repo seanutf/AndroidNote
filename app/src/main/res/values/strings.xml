@@ -15,9 +15,11 @@
     <string name="text_animation_summary_main">Android中动画的学习</string>
     <string name="text_share_summary_main">添加应用到系统分享列表和调用系统分享</string>
     <string name="text_permission_summary_main">动态获取权限的适配</string>
+    <string name="text_serialize_summary_main">Android中数据序列化的实践</string>
     <string name="text_animation_text_main">动画</string>
     <string name="text_share_text_main">分享</string>
     <string name="text_permission_text_main">权限</string>
+    <string name="text_serialize_text_main">序列化</string>
     <string name="text_barrage_text_main">弹幕练习</string>
     <string name="text_barrage_summary_main">日！SB运营</string>
     <!--QA页面-->

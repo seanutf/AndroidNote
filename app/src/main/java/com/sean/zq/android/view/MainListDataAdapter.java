@@ -114,6 +114,9 @@ public class MainListDataAdapter extends BaseAdapter{
             case permission:
                 intent = new Intent(context, PermissionActivity.class);
                 context.startActivity(intent);
+            case serialize:
+                intent = new Intent(context, PermissionActivity.class);
+                context.startActivity(intent);
                 break;
             default:
                 break;

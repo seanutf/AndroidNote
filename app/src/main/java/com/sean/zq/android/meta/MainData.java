@@ -47,5 +47,6 @@ public class MainData {
         animation,
         share,
         permission,
+        serialize,
     }
 }

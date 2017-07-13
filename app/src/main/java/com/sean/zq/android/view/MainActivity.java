@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         MainData mainDataAnimation = new MainData(getString(R.string.text_animation_text_main), MainData.MainDataType.animation, getString(R.string.text_animation_summary_main));
         MainData mainDataShare = new MainData(getString(R.string.text_share_text_main), MainData.MainDataType.share, getString(R.string.text_share_summary_main));
         MainData mainDataPermission = new MainData(getString(R.string.text_permission_text_main), MainData.MainDataType.permission, getString(R.string.text_permission_summary_main));
+        MainData mainDataSerialize = new MainData(getString(R.string.text_serialize_text_main), MainData.MainDataType.permission, getString(R.string.text_serialize_summary_main));
 
         //添加对象到列表
         list.add(mainDataQA);
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(mainDataAnimation);
         list.add(mainDataShare);
         list.add(mainDataPermission);
+        list.add(mainDataSerialize);
 
         return list;
     }
