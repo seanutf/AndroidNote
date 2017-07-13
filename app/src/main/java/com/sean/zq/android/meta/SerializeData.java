@@ -23,8 +23,112 @@ public class SerializeData implements Parcelable{
     Map<Integer, String> score;
     AddrData first;
     OtherUserData otherUserData;
+    boolean isFirst;
+    boolean isChina;
 
     public SerializeData(){}
+
+    public static class Builder{
+        String name;
+        long id;
+        int postion;
+        List<String> hobby;
+        List<AddrData> addrDataList;
+        float height;
+        double weight;
+        DataPattern mDataPattern;
+        Map<Integer, String> score;
+        AddrData first;
+        OtherUserData otherUserData;
+        boolean isFirst;
+        boolean isChina;
+        public Builder(){}
+
+        public Builder setName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Builder setId(long id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder setPostion(int postion) {
+            this.postion = postion;
+            return this;
+        }
+
+        public Builder setHobby(List<String> hobby) {
+            this.hobby = hobby;
+            return this;
+        }
+
+        public Builder setAddrDataList(List<AddrData> addrDataList) {
+            this.addrDataList = addrDataList;
+            return this;
+        }
+
+        public Builder setHeight(float height) {
+            this.height = height;
+            return this;
+        }
+
+        public Builder setmDataPattern(DataPattern mDataPattern) {
+            this.mDataPattern = mDataPattern;
+            return this;
+        }
+
+        public Builder setWeight(double weight) {
+            this.weight = weight;
+            return this;
+        }
+
+        public Builder setScore(Map<Integer, String> score) {
+            this.score = score;
+            return this;
+        }
+
+        public Builder setFirst(AddrData first) {
+            this.first = first;
+            return this;
+        }
+
+        public Builder setOtherUserData(OtherUserData otherUserData) {
+            this.otherUserData = otherUserData;
+            return this;
+        }
+
+        public Builder setFirst(boolean first) {
+            isFirst = first;
+            return this;
+        }
+
+        public Builder setChina(boolean china) {
+            isChina = china;
+            return this;
+        }
+
+        public SerializeData build(){
+            return new SerializeData(this);
+        }
+    }
+
+    private SerializeData(Builder builder){
+        this.name = builder.name;
+        this.id = builder.id;
+        this.postion = builder.postion;
+        this.hobby = builder.hobby;
+        this.addrDataList = builder.addrDataList;
+        this.height = builder.height;
+        this.weight = builder.weight;
+        this.mDataPattern = builder.mDataPattern;
+        this.score = builder.score;
+        this.first = builder.first;
+        this.otherUserData = builder.otherUserData;
+        this.isFirst = builder.isFirst;
+        this.isChina = builder.isChina;
+    }
 
     public String getName() {
         return name;
@@ -106,6 +210,30 @@ public class SerializeData implements Parcelable{
         this.first = first;
     }
 
+    public OtherUserData getOtherUserData() {
+        return otherUserData;
+    }
+
+    public void setOtherUserData(OtherUserData otherUserData) {
+        this.otherUserData = otherUserData;
+    }
+
+    public boolean isFirst() {
+        return isFirst;
+    }
+
+    public void setFirst(boolean first) {
+        isFirst = first;
+    }
+
+    public boolean isChina() {
+        return isChina;
+    }
+
+    public void setChina(boolean china) {
+        isChina = china;
+    }
+
     public enum DataPattern {
         File,
         RANDOM,
@@ -131,6 +259,8 @@ public class SerializeData implements Parcelable{
         dest.writeTypedList(addrDataList);
         dest.writeInt(mDataPattern.ordinal());
         dest.writeMap(score);
+        boolean[] booleanList = {isFirst, isChina};
+        dest.writeBooleanArray(booleanList);
     }
 
     public static final Parcelable.Creator<SerializeData> CREATOR
@@ -156,5 +286,7 @@ public class SerializeData implements Parcelable{
         in.readTypedList(addrDataList, AddrData.CREATOR);
         mDataPattern = DataPattern.values()[in.readInt()];
         in.readMap(score, getClass().getClassLoader());
+        boolean[] booleanList = {isFirst, isChina};
+        in.readBooleanArray(booleanList);
     }
 }
