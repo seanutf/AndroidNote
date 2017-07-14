@@ -11,6 +11,7 @@ import com.sean.note.android.R;
 import com.sean.zq.android.meta.MainData;
 import com.sean.zq.android.view.permission.PermissionActivity;
 import com.sean.zq.android.view.qa.QAActivity;
+import com.sean.zq.android.view.serialize.Serialize1Activity;
 import com.sean.zq.android.view.share.ShareActivity;
 import com.sean.zq.android.view.thread.ThreadActivity;
 import com.sean.zq.android.view.view.ViewActivity;
@@ -115,7 +116,7 @@ public class MainListDataAdapter extends BaseAdapter{
                 intent = new Intent(context, PermissionActivity.class);
                 context.startActivity(intent);
             case serialize:
-                intent = new Intent(context, PermissionActivity.class);
+                intent = new Intent(context, Serialize1Activity.class);
                 context.startActivity(intent);
                 break;
             default:

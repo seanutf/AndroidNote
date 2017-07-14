@@ -3,6 +3,8 @@ package com.sean.zq.android.meta;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -282,9 +284,12 @@ public class SerializeData implements Parcelable{
         name = in.readString();
         first = in.readParcelable(AddrData.class.getClassLoader());
         otherUserData = (OtherUserData) in.readSerializable();
+        hobby = new ArrayList<String>();
         in.readStringList(hobby);
+        addrDataList = new ArrayList<AddrData>();
         in.readTypedList(addrDataList, AddrData.CREATOR);
         mDataPattern = DataPattern.values()[in.readInt()];
+        score = new HashMap<Integer, String>();
         in.readMap(score, getClass().getClassLoader());
         boolean[] booleanList = {isFirst, isChina};
         in.readBooleanArray(booleanList);

@@ -12,6 +12,7 @@ public class AddrData implements Parcelable{
     String city;
     String area;
     String street;
+    public AddrData(){}
 
     public String getStreet() {
         return street;

@@ -2,6 +2,7 @@ package com.sean.zq.android.view.serialize;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.sean.note.android.R;
 import com.sean.zq.android.meta.SerializeData;
@@ -14,6 +15,7 @@ public class Serialize2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_layout_serialize2);
         if(getIntent() != null){
             SerializeData data = getIntent().getParcelableExtra("ff");
+            ((TextView) findViewById(R.id.addr_first)).setText(data.getName());
         }
     }
 }
