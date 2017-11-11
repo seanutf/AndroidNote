@@ -18,6 +18,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private final static int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 0;
+    int y;
+    int z;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +46,38 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        int x = 15;
+        int result = getY(15);
+
         StretchListView listView = (StretchListView)findViewById(R.id.main_list);
         final MainListDataAdapter adapter = new MainListDataAdapter(this,getMainDataList());
         if(listView !=null)
             listView.setAdapter(adapter);
     }
+
+
+
+
+
+    // 思路：1毛钱1个桃，买两个才能赠一个，所以1元钱是买10个桃，赠5个
+    //所以设置x初始值为15
+    int x = 15;
+    int result = getY(15);
+
+    private int getY(int x) {
+        if(x < 3){
+            return x;
+        }else {
+            int temp = getY(x / 3 + x % 3);
+            return temp + x - x % 3;
+        }
+    }
+
+
+
+
+
+
 
     private List<MainData> getMainDataList() {
         List<MainData> list = new ArrayList<MainData>();
