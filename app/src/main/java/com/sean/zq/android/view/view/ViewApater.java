@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.sean.note.android.R;
+import com.sean.zq.android.view.activity.LaunchStandardActivity;
 import com.sean.zq.android.view.view.fragment.FragmentDemoActivity;
 
 import java.util.List;
@@ -70,6 +71,9 @@ public class ViewApater extends BaseAdapter{
         Intent intent = null;
         if(meta.equals(context.getString(R.string.text_view_fragment))){
             intent = new Intent(context,FragmentDemoActivity.class);
+            context.startActivity(intent);
+        }else if(meta.equals("Activity")){
+            intent = new Intent(context, LaunchStandardActivity.class);
             context.startActivity(intent);
         }
     }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/btn_launch_mode_0"
+        android:text="点击启动standard模式"
+        android:background="@color/colorAccent"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/btn_launch_mode_1"
+        android:text="点击启动singleTop模式"
+        android:background="@color/colorPrimary"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/btn_launch_mode_2"
+        android:text="点击启动SingleTask模式"
+        android:background="@color/colorAccent"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/btn_launch_mode_3"
+        android:text="点击启动singleInstance模式"
+        android:background="@color/colorPrimary"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/btn_launch_mode_4"
+        android:text="按点击启动标准模式"
+        android:background="@color/colorAccent"/>
+</LinearLayout>

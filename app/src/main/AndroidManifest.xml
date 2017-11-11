@@ -34,8 +34,16 @@
         <activity android:name="com.sean.zq.android.utils.asynctask.AsyncTaskLoaderActivity" />
         <activity android:name="com.sean.zq.android.view.view.fragment.FragmentStack" />
         <activity android:name="com.sean.zq.android.view.widget.surfaceview.SurfaceViewActivity" />
+        <activity android:name="com.sean.zq.android.view.activity.LaunchModeBaseActivity"/>
+        <activity android:name="com.sean.zq.android.view.activity.LaunchStandardActivity"
+                  android:launchMode="standard"/>
+        <activity android:name="com.sean.zq.android.view.activity.LaunchSingleTopActivity"
+                  android:launchMode="singleTop"/>
+        <activity android:name="com.sean.zq.android.view.activity.LaunchSingleTaskActivity"
+                  android:launchMode="singleTask"/>
+        <activity android:name="com.sean.zq.android.view.activity.LaunchSingleInstanceActivity"
+                  android:launchMode="singleInstance"/>
         <activity android:name="com.sean.zq.android.view.share.ShareActivity">
-
             <!-- 处理单张图片的Intent -->
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />

@@ -26,6 +26,7 @@ public class ViewActivity extends AppCompatActivity {
     private List<String> getViewData(){
         List<String> list = new ArrayList<String>();
         list.add(getString(R.string.text_view_fragment));
+        list.add("Activity");
         return list;
     }
 }
