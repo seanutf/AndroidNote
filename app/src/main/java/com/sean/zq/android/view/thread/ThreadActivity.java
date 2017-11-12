@@ -28,7 +28,7 @@ public class ThreadActivity extends AppCompatActivity {
         btnJumpThread.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ThreadActivity.this, AsyncTaskLoaderActivity.class));
+                startActivity(new Intent(ThreadActivity.this, ThreadExecutorActivity.class));
             }
         });
         btnJumpAsync.setOnClickListener(new View.OnClickListener() {
