@@ -25,6 +25,12 @@ public class ThreadActivity extends AppCompatActivity {
         btnJumpThread = (Button) findViewById(R.id.btn_jump_thread);
         btnJumpAsync = (Button) findViewById(R.id.btn_jump_async);
         btnJumpMyAsync = (Button) findViewById(R.id.btn_jump_my_async);
+        btnJumpThread.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ThreadActivity.this, AsyncTaskLoaderActivity.class));
+            }
+        });
         btnJumpAsync.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
