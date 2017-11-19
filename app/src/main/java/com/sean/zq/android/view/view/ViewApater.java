@@ -72,8 +72,11 @@ public class ViewApater extends BaseAdapter{
         if(meta.equals(context.getString(R.string.text_view_fragment))){
             intent = new Intent(context,FragmentDemoActivity.class);
             context.startActivity(intent);
-        }else if(meta.equals("Activity")){
+        }else if(meta.equals(context.getString(R.string.text_view_activity))){
             intent = new Intent(context, LaunchStandardActivity.class);
+            context.startActivity(intent);
+        }else if(meta.equals(context.getString(R.string.text_view_event))){
+            intent = new Intent(context, ViewClickEventActivity.class);
             context.startActivity(intent);
         }
     }

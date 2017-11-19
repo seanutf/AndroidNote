@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.sean.note.android.R;
 import com.sean.zq.android.meta.MainData;
+import com.sean.zq.android.view.animations.AnimationsActivity;
 import com.sean.zq.android.view.permission.PermissionActivity;
 import com.sean.zq.android.view.qa.QAActivity;
 import com.sean.zq.android.view.serialize.Serialize1Activity;
@@ -101,7 +102,7 @@ public class MainListDataAdapter extends BaseAdapter{
                 context.startActivity(intent);
                 break;
             case animation:
-                intent = new Intent(context,QAActivity.class);
+                intent = new Intent(context,AnimationsActivity.class);
                 context.startActivity(intent);
                 break;
             case thread:
