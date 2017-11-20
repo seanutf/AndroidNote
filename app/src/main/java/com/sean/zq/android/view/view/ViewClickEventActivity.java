@@ -1,6 +1,7 @@
 package com.sean.zq.android.view.view;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v4.util.LruCache;
 import android.support.v7.app.AppCompatActivity;
@@ -29,8 +30,6 @@ public class ViewClickEventActivity extends AppCompatActivity {
         setContentView(R.layout.activity_layout_view_click_enent);
         iv = (ImageView)findViewById(R.id.iv);
         btn = (Button) findViewById(R.id.btn);
-        getCacheDir();
-        //LruCache
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

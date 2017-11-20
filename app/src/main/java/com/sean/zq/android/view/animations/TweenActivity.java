@@ -16,6 +16,7 @@ import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.sean.note.android.R;
 
 import static android.view.animation.Animation.RESTART;
@@ -61,6 +62,10 @@ public class TweenActivity extends AppCompatActivity {
                 imageView.startAnimation(scaleAnimation);
             }
         });
+
+        //Glide.with(this)
+                //.load(url)
+                //.into(imageView);
 
         //旋转动画 使用RotateAnimation
         findViewById(R.id.button5).setOnClickListener(new View.OnClickListener() {

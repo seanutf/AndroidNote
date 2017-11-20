@@ -84,6 +84,8 @@
         </activity>
         <activity android:name="com.sean.zq.android.view.animations.PropertyAnimationActivity">
         </activity>
+        <activity android:name="com.sean.zq.android.view.image.ImageListActivity">
+        </activity>
     </application>
 
 </manifest>
