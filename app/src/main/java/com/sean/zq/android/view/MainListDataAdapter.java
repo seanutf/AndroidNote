@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.sean.note.android.R;
 import com.sean.zq.android.meta.MainData;
 import com.sean.zq.android.view.animations.AnimationsActivity;
+import com.sean.zq.android.view.image.ImageListActivity;
 import com.sean.zq.android.view.permission.PermissionActivity;
 import com.sean.zq.android.view.qa.QAActivity;
 import com.sean.zq.android.view.serialize.Serialize1Activity;
@@ -118,6 +119,10 @@ public class MainListDataAdapter extends BaseAdapter{
                 context.startActivity(intent);
             case serialize:
                 intent = new Intent(context, Serialize1Activity.class);
+                context.startActivity(intent);
+                break;
+            case image:
+                intent = new Intent(context, ImageListActivity.class);
                 context.startActivity(intent);
                 break;
             default:

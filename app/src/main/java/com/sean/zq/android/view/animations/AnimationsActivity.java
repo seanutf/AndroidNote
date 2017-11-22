@@ -7,6 +7,10 @@ import android.view.View;
 
 import com.sean.note.android.R;
 
+import rx.Observable;
+import rx.functions.Action0;
+import rx.schedulers.Schedulers;
+
 public class AnimationsActivity extends AppCompatActivity {
 
     @Override
@@ -25,5 +29,17 @@ public class AnimationsActivity extends AppCompatActivity {
                 startActivity(new Intent(AnimationsActivity.this,PropertyAnimationActivity.class));
             }
         });
+
+//        Observable.create(onSubscribe)
+//                .subscribeOn(Schedulers.io())
+//                .doOnSubscribe(new Action0() {
+//                    @Override
+//                    public void call() {
+//                        progressBar.setVisibility(View.VISIBLE); // 需要在主线程执行
+//                    }
+//                })
+//                .subscribeOn(AndroidSchedulers.mainThread()) // 指定主线程
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(subscriber);
     }
 }

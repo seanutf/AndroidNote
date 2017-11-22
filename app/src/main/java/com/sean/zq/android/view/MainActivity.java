@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        int x = 15;
-        int result = getY(15);
+        //int x = 15;
+        //int result = getY(15);
 
         StretchListView listView = (StretchListView)findViewById(R.id.main_list);
         final MainListDataAdapter adapter = new MainListDataAdapter(this,getMainDataList());
@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         MainData mainDataShare = new MainData(getString(R.string.text_share_text_main), MainData.MainDataType.share, getString(R.string.text_share_summary_main));
         MainData mainDataPermission = new MainData(getString(R.string.text_permission_text_main), MainData.MainDataType.permission, getString(R.string.text_permission_summary_main));
         MainData mainDataSerialize = new MainData(getString(R.string.text_serialize_text_main), MainData.MainDataType.serialize, getString(R.string.text_serialize_summary_main));
+        MainData mainDataImage = new MainData(getString(R.string.text_serialize_text_image), MainData.MainDataType.image, getString(R.string.text_image_summary_main));
 
         //添加对象到列表
         list.add(mainDataQA);
@@ -102,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(mainDataShare);
         list.add(mainDataPermission);
         list.add(mainDataSerialize);
+        list.add(mainDataImage);
 
         return list;
     }
