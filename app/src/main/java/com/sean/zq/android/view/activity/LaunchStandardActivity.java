@@ -8,7 +8,8 @@ import android.view.View;
 import com.sean.note.android.R;
 
 /**
- * Created by zhangyi on 2017/11/11.
+ * Created by sean on 2017/11/11.
+ * 启动模式和生命周期
  */
 
 public class LaunchStandardActivity extends LaunchModeBaseActivity {
@@ -43,12 +44,12 @@ public class LaunchStandardActivity extends LaunchModeBaseActivity {
                 startActivity(intent);
             }
         });
-//        findViewById(R.id.btn_launch_mode_4).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(LaunchStandardActivity.this, LaunchStandardActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        findViewById(R.id.btn_launch_mode_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LaunchStandardActivity.this, LifecycleActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
