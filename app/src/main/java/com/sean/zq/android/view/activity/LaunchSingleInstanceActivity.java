@@ -8,7 +8,9 @@ import android.view.View;
 import com.sean.note.android.R;
 
 /**
- * Created by zhangyi on 2017/11/11.
+ * Created by sean on 2017/11/11.
+ *
+ * Activity 启动模式
  */
 
 public class LaunchSingleInstanceActivity extends LaunchModeBaseActivity {
