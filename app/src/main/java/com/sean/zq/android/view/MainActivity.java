@@ -6,10 +6,14 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.sean.note.android.R;
 import com.sean.zq.android.meta.MainData;
+import com.sean.zq.android.utils.KotlinTestKt;
+import com.sean.zq.android.utils.TestK;
+import com.sean.zq.android.utils.TestKK;
 import com.sean.zq.android.utils.widget.StretchListView;
 
 import java.util.ArrayList;
@@ -18,6 +22,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private final static int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 0;
+    private static final String TAG = MainActivity.class.getSimpleName();
     int y;
     int z;
 
@@ -48,6 +53,24 @@ public class MainActivity extends AppCompatActivity {
 
         //int x = 15;
         //int result = getY(15);
+
+        TestKK kk = new TestKK();
+        TestK k = new TestK();
+        if(kk != null && k != null){
+            Log.i(TAG, kk.getName());
+            kk.setName("oh, no");
+            if(kk.getTestK() != null){
+                Log.i(TAG, "kk.getk" + "-" + kk.getTestK().getName());
+                kk.setTestK(new TestK());
+                kk.ii();
+            }
+
+            Log.i(TAG, kk.getName());
+            Log.i(TAG, k.getName());
+            k.isError();
+            k.setError(false);
+        }
+
 
         StretchListView listView = (StretchListView)findViewById(R.id.main_list);
         final MainListDataAdapter adapter = new MainListDataAdapter(this,getMainDataList());
@@ -92,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
         MainData mainDataPermission = new MainData(getString(R.string.text_permission_text_main), MainData.MainDataType.permission, getString(R.string.text_permission_summary_main));
         MainData mainDataSerialize = new MainData(getString(R.string.text_serialize_text_main), MainData.MainDataType.serialize, getString(R.string.text_serialize_summary_main));
         MainData mainDataImage = new MainData(getString(R.string.text_serialize_text_image), MainData.MainDataType.image, getString(R.string.text_image_summary_main));
+        MainData mainDataSQLite = new MainData(getString(R.string.text_serialize_text_sqlite), MainData.MainDataType.sqlite, getString(R.string.text_sqlite_summary_main));
 
         //添加对象到列表
         list.add(mainDataQA);
@@ -104,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(mainDataPermission);
         list.add(mainDataSerialize);
         list.add(mainDataImage);
+        list.add(mainDataSQLite);
 
         return list;
     }

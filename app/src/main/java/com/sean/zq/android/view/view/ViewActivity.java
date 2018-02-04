@@ -28,6 +28,7 @@ public class ViewActivity extends AppCompatActivity {
         list.add(getString(R.string.text_view_fragment));
         list.add(getString(R.string.text_view_activity));
         list.add(getString(R.string.text_view_event));
+        list.add(getString(R.string.text_view_custom));
         return list;
     }
 }

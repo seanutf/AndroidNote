@@ -17,11 +17,13 @@
     <string name="text_permission_summary_main">动态获取权限的适配</string>
     <string name="text_serialize_summary_main">Android中数据序列化的实践</string>
     <string name="text_image_summary_main">获取图片、图片缓存demo</string>
+    <string name="text_sqlite_summary_main">数据库的使用</string>
     <string name="text_animation_text_main">动画</string>
     <string name="text_share_text_main">分享</string>
     <string name="text_permission_text_main">权限</string>
     <string name="text_serialize_text_main">序列化</string>
     <string name="text_serialize_text_image">图片</string>
+    <string name="text_serialize_text_sqlite">数据库的使用</string>
     <string name="text_barrage_text_main">弹幕练习</string>
     <string name="text_barrage_summary_main">日！SB运营</string>
     <!--QA页面-->
@@ -65,6 +67,7 @@
     <string name="text_view_fragment">Fragment</string>
     <string name="text_view_activity">Activity</string>
     <string name="text_view_event">ViewClickEvent</string>
+    <string name="text_view_custom">CustomView</string>
     <!--FragmentDemo页面-->
     <string name="text_fragment_demo_from_api_demo">ApiDemos中的Fragment示例：在布局中的fragment使用</string>
     <string name="text_fragment_demo_from_api_demo_back_stack">ApiDemos中的Fragment示例：Fragment后退栈</string>

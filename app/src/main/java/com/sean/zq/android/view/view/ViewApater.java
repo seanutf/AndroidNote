@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.sean.note.android.R;
 import com.sean.zq.android.view.activity.LaunchStandardActivity;
+import com.sean.zq.android.view.view.custom.CustomViewActivity;
 import com.sean.zq.android.view.view.fragment.FragmentDemoActivity;
 
 import java.util.List;
@@ -77,6 +78,9 @@ public class ViewApater extends BaseAdapter{
             context.startActivity(intent);
         }else if(meta.equals(context.getString(R.string.text_view_event))){
             intent = new Intent(context, ViewClickEventActivity.class);
+            context.startActivity(intent);
+        }else if(meta.equals(context.getString(R.string.text_view_custom))){
+            intent = new Intent(context, CustomViewActivity.class);
             context.startActivity(intent);
         }
     }

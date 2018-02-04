@@ -49,5 +49,6 @@ public class MainData {
         permission,
         serialize,
         image,
+        sqlite,
     }
 }

@@ -90,6 +90,8 @@
         </activity>
         <activity android:name="com.sean.zq.android.view.activity.Lifecycle2Activity">
         </activity>
+        <activity android:name="com.sean.zq.android.view.view.custom.CustomViewActivity">
+        </activity>
     </application>
 
 </manifest>
