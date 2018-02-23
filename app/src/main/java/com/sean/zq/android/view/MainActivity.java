@@ -84,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
 
     // 思路：1毛钱1个桃，买两个才能赠一个，所以1元钱是买10个桃，赠5个
     //所以设置x初始值为15
-    int x = 15;
-    int result = getY(15);
+    //int x = 15;
+    //int result = getY(15);
 
     private int getY(int x) {
         if(x < 3){
