@@ -3,9 +3,11 @@ package com.sean.zq.android.module.kotlin
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.support.v7.widget.LinearLayoutManager
 import com.sean.note.android.BuildConfig
 import com.sean.note.android.R
 import com.sean.zq.android.meta.AddrData
+import kotlinx.android.synthetic.main.activity_kotlin_main.*
 import java.util.logging.Logger
 
 class KotlinMainActivity : AppCompatActivity() {
@@ -37,6 +39,8 @@ class KotlinMainActivity : AppCompatActivity() {
      4
         var instance4 = create()
      * */
+
+    val demoList = listOf<String>("BroadcastReceiver")
     companion object YoungPeople{
         fun create(): AddrData = AddrData()
         val log = Logger.getLogger(KotlinMainActivity.javaClass.name)
@@ -54,6 +58,8 @@ class KotlinMainActivity : AppCompatActivity() {
         val factory = KotlinMainActivity.YoungPeople
         var instance1 = create()
         var aa = getCurrentVersion()
+        kotlin_demo_list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
+        kotlin_demo_list.adapter = KotlinMainListAdapter(demoList, this)
     }
 
     override fun onResume() {

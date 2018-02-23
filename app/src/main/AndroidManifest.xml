@@ -76,17 +76,26 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+        <receiver
+            android:name="com.sean.zq.android.module.kotlin.KotlinTestReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="this is a broadcast action" />
+            </intent-filter>
+        </receiver>
 
         <activity android:name="com.sean.zq.android.view.serialize.Serialize1Activity" />
         <activity android:name="com.sean.zq.android.view.serialize.Serialize2Activity" />
-        <activity android:name="com.sean.zq.android.view.animations.AnimationsActivity"></activity>
-        <activity android:name="com.sean.zq.android.view.animations.TweenActivity"></activity>
-        <activity android:name="com.sean.zq.android.view.animations.PropertyAnimationActivity"></activity>
-        <activity android:name="com.sean.zq.android.view.image.ImageListActivity"></activity>
-        <activity android:name="com.sean.zq.android.view.activity.LifecycleActivity"></activity>
-        <activity android:name="com.sean.zq.android.view.activity.Lifecycle2Activity"></activity>
-        <activity android:name="com.sean.zq.android.view.view.custom.CustomViewActivity"></activity>
-        <activity android:name="com.sean.zq.android.module.kotlin.KotlinMainActivity"></activity>
+        <activity android:name="com.sean.zq.android.view.animations.AnimationsActivity" />
+        <activity android:name="com.sean.zq.android.view.animations.TweenActivity" />
+        <activity android:name="com.sean.zq.android.view.animations.PropertyAnimationActivity" />
+        <activity android:name="com.sean.zq.android.view.image.ImageListActivity" />
+        <activity android:name="com.sean.zq.android.view.activity.LifecycleActivity" />
+        <activity android:name="com.sean.zq.android.view.activity.Lifecycle2Activity" />
+        <activity android:name="com.sean.zq.android.view.view.custom.CustomViewActivity" />
+        <activity android:name="com.sean.zq.android.module.kotlin.KotlinMainActivity" />
+        <activity android:name="com.sean.zq.android.module.kotlin.KotlinTestBroadcastActivity"></activity>
     </application>
 
 </manifest>
