@@ -116,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
         MainData mainDataSerialize = new MainData(getString(R.string.text_serialize_text_main), MainData.MainDataType.serialize, getString(R.string.text_serialize_summary_main));
         MainData mainDataImage = new MainData(getString(R.string.text_serialize_text_image), MainData.MainDataType.image, getString(R.string.text_image_summary_main));
         MainData mainDataSQLite = new MainData(getString(R.string.text_serialize_text_sqlite), MainData.MainDataType.sqlite, getString(R.string.text_sqlite_summary_main));
+        MainData mainDataKotlin = new MainData(getString(R.string.text_kotlin_exercise_main), MainData.MainDataType.kotlin, getString(R.string.text_kotlin_exercise_summary));
 
         //添加对象到列表
         list.add(mainDataQA);
@@ -129,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(mainDataSerialize);
         list.add(mainDataImage);
         list.add(mainDataSQLite);
+        list.add(mainDataKotlin);
 
         return list;
     }
