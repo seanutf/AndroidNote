@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.sean.note.android.R;
 import com.sean.zq.android.meta.MainData;
+import com.sean.zq.android.module.kotlin.KotlinMainActivity;
 import com.sean.zq.android.view.animations.AnimationsActivity;
 import com.sean.zq.android.view.image.ImageListActivity;
 import com.sean.zq.android.view.permission.PermissionActivity;
@@ -123,6 +124,10 @@ public class MainListDataAdapter extends BaseAdapter{
                 break;
             case image:
                 intent = new Intent(context, ImageListActivity.class);
+                context.startActivity(intent);
+                break;
+            case kotlin:
+                intent = new Intent(context, KotlinMainActivity.class);
                 context.startActivity(intent);
                 break;
             default:

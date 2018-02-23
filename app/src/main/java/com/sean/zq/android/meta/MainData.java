@@ -50,5 +50,6 @@ public class MainData {
         serialize,
         image,
         sqlite,
+        kotlin,
     }
 }

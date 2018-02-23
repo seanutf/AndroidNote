@@ -24,6 +24,8 @@
     <string name="text_serialize_text_main">序列化</string>
     <string name="text_serialize_text_image">图片</string>
     <string name="text_serialize_text_sqlite">数据库的使用</string>
+    <string name="text_kotlin_exercise_main">Kotlin</string>
+    <string name="text_kotlin_exercise_summary">Kotlin语言的使用练习</string>
     <string name="text_barrage_text_main">弹幕练习</string>
     <string name="text_barrage_summary_main">日！SB运营</string>
     <!--QA页面-->
@@ -73,4 +75,5 @@
     <string name="text_fragment_demo_from_api_demo_back_stack">ApiDemos中的Fragment示例：Fragment后退栈</string>
     <string name="new_fragment">New fragment</string>
     <string name="hello_world"><b>Hello, <i>World!</i></b></string>
+    <string name="broadcast_text">Broadcast</string>
 </resources>
