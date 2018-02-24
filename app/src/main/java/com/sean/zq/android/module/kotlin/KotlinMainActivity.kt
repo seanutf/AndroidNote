@@ -40,7 +40,7 @@ class KotlinMainActivity : AppCompatActivity() {
         var instance4 = create()
      * */
 
-    val demoList = listOf<String>("BroadcastReceiver")
+    private val demoList = listOf("BroadcastReceiver", "IntentService")
     companion object YoungPeople{
         fun create(): AddrData = AddrData()
         val log = Logger.getLogger(KotlinMainActivity.javaClass.name)

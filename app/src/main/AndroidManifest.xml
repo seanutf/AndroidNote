@@ -95,7 +95,12 @@
         <activity android:name="com.sean.zq.android.view.activity.Lifecycle2Activity" />
         <activity android:name="com.sean.zq.android.view.view.custom.CustomViewActivity" />
         <activity android:name="com.sean.zq.android.module.kotlin.KotlinMainActivity" />
-        <activity android:name="com.sean.zq.android.module.kotlin.KotlinTestBroadcastActivity"></activity>
+        <activity android:name="com.sean.zq.android.module.kotlin.KotlinTestBroadcastActivity" />
+        <activity android:name="com.sean.zq.android.module.kotlin.KotlinIntentServiceActivity" />
+
+        <service
+            android:name="com.sean.zq.android.module.kotlin.KotlinIntentService"
+            android:exported="false"></service>
     </application>
 
 </manifest>

@@ -31,13 +31,8 @@ class KotlinMainListAdapter(val demoList: List<String>, val context: Context) : 
     }
 
     class DemoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        companion object {
-            val ZERO : Int = 0
-        }
-
-        fun bindItems(holder: DemoViewHolder?, myAndroidOsListName: String) {
-            itemView.title_demo_item.text = myAndroidOsListName
+        fun bindItems(holder: DemoViewHolder?, itemTitle: String) {
+            itemView.title_demo_item.text = itemTitle
             itemView.root_view_demo_item.setOnClickListener({
 
                 when(holder?.layoutPosition){
@@ -46,7 +41,7 @@ class KotlinMainListAdapter(val demoList: List<String>, val context: Context) : 
                         startActivity(itemView.context, intent, null)
                     }
                     1 ->{
-                        val intent = Intent(itemView.context, KotlinTestBroadcastActivity::class.java)
+                        val intent = Intent(itemView.context, KotlinIntentServiceActivity::class.java)
                         startActivity(itemView.context, intent, null)
                     }
                     2 ->{
