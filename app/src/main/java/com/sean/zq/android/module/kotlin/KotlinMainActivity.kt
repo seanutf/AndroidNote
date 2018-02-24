@@ -40,7 +40,6 @@ class KotlinMainActivity : AppCompatActivity() {
         var instance4 = create()
      * */
 
-    private val demoList = listOf("BroadcastReceiver", "IntentService")
     companion object YoungPeople{
         fun create(): AddrData = AddrData()
         val log = Logger.getLogger(KotlinMainActivity.javaClass.name)
@@ -48,7 +47,7 @@ class KotlinMainActivity : AppCompatActivity() {
             return BuildConfig.VERSION_NAME
         }
     }
-
+    private val demoList = listOf("BroadcastReceiver", "IntentService")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlin_main)

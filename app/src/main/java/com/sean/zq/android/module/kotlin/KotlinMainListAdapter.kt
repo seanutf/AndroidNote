@@ -48,18 +48,6 @@ class KotlinMainListAdapter(val demoList: List<String>, val context: Context) : 
                         val intent = Intent(itemView.context, KotlinTestBroadcastActivity::class.java)
                         startActivity(itemView.context, intent, null)
                     }
-                    3 ->{
-                        val intent = Intent(itemView.context, KotlinTestBroadcastActivity::class.java)
-                        startActivity(itemView.context, intent, null)
-                    }
-                    4 ->{
-                        val intent = Intent(itemView.context, KotlinTestBroadcastActivity::class.java)
-                        startActivity(itemView.context, intent, null)
-                    }
-                    5 ->{
-                        val intent = Intent(itemView.context, KotlinTestBroadcastActivity::class.java)
-                        startActivity(itemView.context, intent, null)
-                    }
                     else ->{
 
                     }
