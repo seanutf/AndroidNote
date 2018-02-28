@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/root_view_custom_view"
-    tools:context="com.sean.zq.android.view.view.custom.CustomViewActivity">
+    tools:context="com.sean.zq.android.module.custom.CustomViewActivity">
 
 </LinearLayout>

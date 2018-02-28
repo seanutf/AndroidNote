@@ -7,10 +7,6 @@ import android.view.View;
 
 import com.sean.note.android.R;
 
-import rx.Observable;
-import rx.functions.Action0;
-import rx.schedulers.Schedulers;
-
 public class AnimationsActivity extends AppCompatActivity {
 
     @Override

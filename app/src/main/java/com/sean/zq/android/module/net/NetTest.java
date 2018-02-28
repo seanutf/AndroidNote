@@ -10,7 +10,7 @@ import java.net.UnknownHostException;
 public class NetTest {
     public void getNet(){
         try {
-            InetAddress inetAddress = InetAddress.getByName("Zhangyi") ; //在给定主机名(计算机的名字或者域名)的情况下确定主机的IP地址
+            InetAddress inetAddress = InetAddress.getByName("sean") ; //在给定主机名(计算机的名字或者域名)的情况下确定主机的IP地址
             inetAddress.getHostAddress(); //返回IP地址的字符串
             inetAddress.getHostName(); //返回主机名
         } catch (UnknownHostException e) {

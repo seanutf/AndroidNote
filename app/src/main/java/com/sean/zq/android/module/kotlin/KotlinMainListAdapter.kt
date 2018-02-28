@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.sean.note.android.R
-import com.sean.zq.android.meta.AddrData
 import kotlinx.android.synthetic.main.item_kotlin_demo_list.view.*
 
 /**

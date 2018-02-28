@@ -1,6 +1,5 @@
 package com.sean.zq.android.module.animations;
 
-import android.graphics.drawable.AnimationDrawable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,15 +7,11 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
-import android.view.animation.GridLayoutAnimationController;
-import android.view.animation.Interpolator;
-import android.view.animation.LayoutAnimationController;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.sean.note.android.R;
 
 import static android.view.animation.Animation.RESTART;

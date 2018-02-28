@@ -11,46 +11,46 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity android:name="com.sean.zq.android.view.MainActivity">
+        <activity android:name="com.sean.zq.android.module.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.sean.zq.android.view.qa.QAActivity" />
-        <activity android:name="com.sean.zq.android.view.widget.textview.BarrageActivity" />
-        <activity android:name="com.sean.zq.android.view.widget.WidgetActivity" />
-        <activity android:name="com.sean.zq.android.view.widget.toolbar.ToolBarActivity" />
-        <activity android:name="com.sean.zq.android.view.widget.textview.TextViewActivity" />
-        <activity android:name="com.sean.zq.android.view.widget.textview.TextViewDetailActivity" />
-        <activity android:name="com.sean.zq.android.view.view.ViewActivity" />
-        <activity android:name="com.sean.zq.android.view.view.fragment.FragmentDemoActivity" />
-        <activity android:name="com.sean.zq.android.utils.asynctask.MyAsyncTaskLoaderActivity" />
-        <activity android:name="com.sean.zq.android.view.view.fragment.FragmentLayout" />
-        <activity android:name="com.sean.zq.android.view.view.fragment.FragmentLayout$DetailsActivity" />
-        <activity android:name="com.sean.zq.android.view.permission.PermissionActivity" />
-        <activity android:name="com.sean.zq.android.view.thread.ThreadActivity" />
-        <activity android:name="com.sean.zq.android.view.thread.ThreadExecutorActivity" />
-        <activity android:name="com.sean.zq.android.view.view.ViewClickEventActivity" />
-        <activity android:name="com.sean.zq.android.utils.asynctask.AsyncTaskLoaderActivity" />
-        <activity android:name="com.sean.zq.android.view.view.fragment.FragmentStack" />
-        <activity android:name="com.sean.zq.android.view.widget.surfaceview.SurfaceViewActivity" />
-        <activity android:name="com.sean.zq.android.view.activity.LaunchModeBaseActivity" />
+        <activity android:name="com.sean.zq.android.module.qa.QAActivity" />
+        <activity android:name="com.sean.zq.android.module.view.widget.textview.BarrageActivity" />
+        <activity android:name="com.sean.zq.android.module.view.widget.WidgetActivity" />
+        <activity android:name="com.sean.zq.android.module.view.widget.toolbar.ToolBarActivity" />
+        <activity android:name="com.sean.zq.android.module.view.widget.textview.TextViewActivity" />
+        <activity android:name="com.sean.zq.android.module.view.widget.textview.TextViewDetailActivity" />
+        <activity android:name="com.sean.zq.android.module.view.ViewActivity" />
+        <activity android:name="com.sean.zq.android.module.view.fragment.FragmentDemoActivity" />
+        <activity android:name="com.sean.zq.android.module.thread.async.MyAsyncTaskLoaderActivity" />
+        <activity android:name="com.sean.zq.android.module.view.fragment.FragmentLayout" />
+        <activity android:name="com.sean.zq.android.module.view.fragment.FragmentLayout$DetailsActivity" />
+        <activity android:name="com.sean.zq.android.module.permission.PermissionActivity" />
+        <activity android:name="com.sean.zq.android.module.thread.ThreadActivity" />
+        <activity android:name="com.sean.zq.android.module.thread.ThreadExecutorActivity" />
+        <activity android:name="com.sean.zq.android.module.view.view.clickEvent.ViewClickEventActivity" />
+        <activity android:name="com.sean.zq.android.module.thread.async.AsyncTaskLoaderActivity" />
+        <activity android:name="com.sean.zq.android.module.view.fragment.FragmentStack" />
+        <activity android:name="com.sean.zq.android.module.view.widget.surfaceview.SurfaceViewActivity" />
+        <activity android:name="com.sean.zq.android.module.view.activity.LaunchModeBaseActivity" />
         <activity android:name="com.sean.zq.android.module.kotlin.KotlinMainActivity" />
         <activity
-            android:name="com.sean.zq.android.view.activity.LaunchStandardActivity"
+            android:name="com.sean.zq.android.module.view.activity.LaunchStandardActivity"
             android:launchMode="standard" />
         <activity
-            android:name="com.sean.zq.android.view.activity.LaunchSingleTopActivity"
+            android:name="com.sean.zq.android.module.view.activity.LaunchSingleTopActivity"
             android:launchMode="singleTop" />
         <activity
-            android:name="com.sean.zq.android.view.activity.LaunchSingleTaskActivity"
+            android:name="com.sean.zq.android.module.view.activity.LaunchSingleTaskActivity"
             android:launchMode="singleTask" />
         <activity
-            android:name="com.sean.zq.android.view.activity.LaunchSingleInstanceActivity"
+            android:name="com.sean.zq.android.module.view.activity.LaunchSingleInstanceActivity"
             android:launchMode="singleInstance" />
-        <activity android:name="com.sean.zq.android.view.share.ShareActivity">
+        <activity android:name="com.sean.zq.android.module.share.ShareActivity">
 
             <!-- 处理单张图片的Intent -->
             <intent-filter>
@@ -71,7 +71,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="com.sean.zq.android.view.MBroadcastReceiver">
+        <receiver android:name="com.sean.zq.android.module.broadcastreceiver.MBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -85,15 +85,15 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.sean.zq.android.view.serialize.Serialize1Activity" />
-        <activity android:name="com.sean.zq.android.view.serialize.Serialize2Activity" />
+        <activity android:name="com.sean.zq.android.module.data.serialize.Serialize1Activity" />
+        <activity android:name="com.sean.zq.android.module.data.serialize.Serialize2Activity" />
         <activity android:name="com.sean.zq.android.module.animations.AnimationsActivity" />
         <activity android:name="com.sean.zq.android.module.animations.TweenActivity" />
         <activity android:name="com.sean.zq.android.module.animations.PropertyAnimationActivity" />
-        <activity android:name="com.sean.zq.android.view.image.ImageListActivity" />
-        <activity android:name="com.sean.zq.android.view.activity.LifecycleActivity" />
-        <activity android:name="com.sean.zq.android.view.activity.Lifecycle2Activity" />
-        <activity android:name="com.sean.zq.android.view.view.custom.CustomViewActivity" />
+        <activity android:name="com.sean.zq.android.module.image.ImageListActivity" />
+        <activity android:name="com.sean.zq.android.module.view.activity.LifecycleActivity" />
+        <activity android:name="com.sean.zq.android.module.view.activity.Lifecycle2Activity" />
+        <activity android:name="com.sean.zq.android.module.view.view.custom.CustomViewActivity" />
         <activity android:name="com.sean.zq.android.module.kotlin.KotlinMainActivity" />
         <activity android:name="com.sean.zq.android.module.kotlin.KotlinTestBroadcastActivity" />
         <activity android:name="com.sean.zq.android.module.kotlin.KotlinIntentServiceActivity" />

@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
-      tools:context="com.sean.zq.android.view.widget.toolbar.ToolBarActivity">
+      tools:context="com.sean.zq.android.module.view.widget.toolbar.ToolBarActivity">
     <!-- "Mark Favorite", should appear as action button if possible -->
     <item
         android:id="@+id/action_search"

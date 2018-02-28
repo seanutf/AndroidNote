@@ -2,7 +2,6 @@ package com.sean.zq.android.utils;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,9 +11,6 @@ import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
-import android.widget.Toast;
-
-import com.sean.zq.android.view.permission.PermissionActivity;
 
 /**
  * Created by sks on 2017/7/6.
