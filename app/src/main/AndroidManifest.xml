@@ -87,9 +87,9 @@
 
         <activity android:name="com.sean.zq.android.view.serialize.Serialize1Activity" />
         <activity android:name="com.sean.zq.android.view.serialize.Serialize2Activity" />
-        <activity android:name="com.sean.zq.android.view.animations.AnimationsActivity" />
-        <activity android:name="com.sean.zq.android.view.animations.TweenActivity" />
-        <activity android:name="com.sean.zq.android.view.animations.PropertyAnimationActivity" />
+        <activity android:name="com.sean.zq.android.module.animations.AnimationsActivity" />
+        <activity android:name="com.sean.zq.android.module.animations.TweenActivity" />
+        <activity android:name="com.sean.zq.android.module.animations.PropertyAnimationActivity" />
         <activity android:name="com.sean.zq.android.view.image.ImageListActivity" />
         <activity android:name="com.sean.zq.android.view.activity.LifecycleActivity" />
         <activity android:name="com.sean.zq.android.view.activity.Lifecycle2Activity" />

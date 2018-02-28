@@ -1,4 +1,4 @@
-package com.sean.zq.android.view.animations;
+package com.sean.zq.android.module.animations;
 
 import android.graphics.drawable.AnimationDrawable;
 import android.support.constraint.ConstraintLayout;
