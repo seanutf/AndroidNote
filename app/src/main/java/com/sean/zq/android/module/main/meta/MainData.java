@@ -1,4 +1,4 @@
-package com.sean.zq.android.meta;
+package com.sean.zq.android.module.main.meta;
 
 /**
  * Created by sean on 2016/9/6.

@@ -8,7 +8,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.sean.note.android.R;
-import com.sean.zq.android.meta.WidgetMeta;
+import com.sean.zq.android.module.view.widget.meta.WidgetMeta;
 
 import java.util.ArrayList;
 import java.util.List;

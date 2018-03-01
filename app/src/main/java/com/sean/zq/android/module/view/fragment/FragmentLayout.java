@@ -17,7 +17,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.sean.note.android.R;
-import com.sean.zq.android.meta.Shakespeare;
+import com.sean.zq.android.module.view.fragment.meta.Shakespeare;
 
 /**
  * Created by sean on 2016/10/15.

@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.sean.note.android.R;
-import com.sean.zq.android.meta.TanmuBean;
+import com.sean.zq.android.module.view.widget.textview.meta.TanmuBean;
 import com.sean.zq.android.module.animations.AnimationHelper;
 import com.sean.zq.android.utils.ScreenUtils;
 

@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.sean.note.android.R;
-import com.sean.zq.android.meta.WidgetMeta;
+import com.sean.zq.android.module.view.widget.meta.WidgetMeta;
 import com.sean.zq.android.module.view.widget.surfaceview.SurfaceViewActivity;
 import com.sean.zq.android.module.view.widget.textview.TextViewActivity;
 import com.sean.zq.android.module.view.widget.toolbar.ToolBarActivity;

@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.sean.note.android.R;
-import com.sean.zq.android.meta.MainData;
+import com.sean.zq.android.module.main.meta.MainData;
 import com.sean.zq.android.module.kotlin.KotlinMainActivity;
 import com.sean.zq.android.module.animations.AnimationsActivity;
 import com.sean.zq.android.module.image.ImageListActivity;

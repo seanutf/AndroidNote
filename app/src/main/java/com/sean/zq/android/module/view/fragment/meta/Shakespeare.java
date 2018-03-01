@@ -1,4 +1,4 @@
-package com.sean.zq.android.meta;
+package com.sean.zq.android.module.view.fragment.meta;
 
 /**
  * Created by sks on 2016/10/15.

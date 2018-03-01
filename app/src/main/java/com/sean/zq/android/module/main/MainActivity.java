@@ -10,7 +10,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.sean.note.android.R;
-import com.sean.zq.android.meta.MainData;
+import com.sean.zq.android.module.main.meta.MainData;
 import com.sean.zq.android.module.kotlin.TestK;
 import com.sean.zq.android.module.kotlin.TestKK;
 import com.sean.zq.android.utils.customView.StretchListView;

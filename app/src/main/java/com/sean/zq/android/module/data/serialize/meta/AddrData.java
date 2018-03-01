@@ -1,4 +1,4 @@
-package com.sean.zq.android.meta;
+package com.sean.zq.android.module.data.serialize.meta;
 
 import android.os.Parcel;
 import android.os.Parcelable;

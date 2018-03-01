@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.sean.note.android.R;
-import com.sean.zq.android.meta.AddrData;
-import com.sean.zq.android.meta.OtherUserData;
-import com.sean.zq.android.meta.SerializeData;
+import com.sean.zq.android.module.data.serialize.meta.AddrData;
+import com.sean.zq.android.module.data.serialize.meta.OtherUserData;
+import com.sean.zq.android.module.data.serialize.meta.SerializeData;
 
 import java.util.ArrayList;
 import java.util.HashMap;

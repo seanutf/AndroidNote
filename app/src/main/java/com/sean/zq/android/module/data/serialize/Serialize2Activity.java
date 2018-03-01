@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.sean.note.android.R;
-import com.sean.zq.android.meta.SerializeData;
+import com.sean.zq.android.module.data.serialize.meta.SerializeData;
 
 public class Serialize2Activity extends AppCompatActivity {
 

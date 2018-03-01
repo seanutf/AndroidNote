@@ -1,4 +1,4 @@
-package com.sean.zq.android.meta;
+package com.sean.zq.android.module.view.widget.textview.meta;
 
 import android.graphics.Color;
 

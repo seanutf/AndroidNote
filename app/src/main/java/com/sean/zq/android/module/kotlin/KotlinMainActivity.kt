@@ -6,7 +6,7 @@ import android.os.PersistableBundle
 import android.support.v7.widget.LinearLayoutManager
 import com.sean.note.android.BuildConfig
 import com.sean.note.android.R
-import com.sean.zq.android.meta.AddrData
+import com.sean.zq.android.module.data.serialize.meta.AddrData
 import kotlinx.android.synthetic.main.activity_kotlin_main.*
 import java.util.logging.Logger
 
