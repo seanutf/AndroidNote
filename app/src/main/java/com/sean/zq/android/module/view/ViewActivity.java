@@ -19,8 +19,8 @@ public class ViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_layout);
         ListView listView = (ListView) findViewById(R.id.list_activity_view);
-        ViewApater apater = new ViewApater(this, getViewData());
-        listView.setAdapter(apater);
+        ViewAdapter adapter = new ViewAdapter(this, getViewData());
+        listView.setAdapter(adapter);
     }
 
     private List<String> getViewData(){

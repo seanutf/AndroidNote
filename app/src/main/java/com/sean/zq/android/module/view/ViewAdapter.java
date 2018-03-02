@@ -19,12 +19,12 @@ import java.util.List;
 /**
  * Created by sean on 2016/10/15.
  */
-public class ViewApater extends BaseAdapter{
+public class ViewAdapter extends BaseAdapter{
 
     List<String> list;
     Context context;
 
-    public ViewApater(Context context,List<String> list){
+    public ViewAdapter(Context context, List<String> list){
         this.list = list;
         this.context = context;
     }
