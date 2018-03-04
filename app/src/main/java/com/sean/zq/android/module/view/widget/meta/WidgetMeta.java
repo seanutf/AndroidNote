@@ -38,5 +38,6 @@ public class WidgetMeta {
         gv,
         sv,
         tb,
+        ctl,
     }
 }

@@ -60,8 +60,10 @@ public class WidgetActivity extends AppCompatActivity{
     private List<WidgetMeta> getViewGroupData(){
         List<WidgetMeta> list = new ArrayList<WidgetMeta>();
         WidgetMeta tbMeta = new WidgetMeta(getString(R.string.text_widget_toolbar), WidgetMeta.WidgetMetaType.tb);
+        WidgetMeta ctlMeta = new WidgetMeta(getString(R.string.text_widget_constraintLayout), WidgetMeta.WidgetMetaType.ctl);
 
         list.add(tbMeta);
+        list.add(ctlMeta);
         return list;
     }
 }

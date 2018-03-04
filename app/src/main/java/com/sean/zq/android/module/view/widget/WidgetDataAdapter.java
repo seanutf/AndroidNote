@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.sean.note.android.R;
+import com.sean.zq.android.module.view.widget.constraint.ConstraintLayoutActivity;
 import com.sean.zq.android.module.view.widget.meta.WidgetMeta;
 import com.sean.zq.android.module.view.widget.surfaceview.SurfaceViewActivity;
 import com.sean.zq.android.module.view.widget.textview.TextViewActivity;
@@ -85,6 +86,10 @@ public class WidgetDataAdapter extends BaseAdapter{
                 break;
             case tb:
                 intent = new Intent(context,ToolBarActivity.class);
+                context.startActivity(intent);
+                break;
+            case ctl:
+                intent = new Intent(context,ConstraintLayoutActivity.class);
                 context.startActivity(intent);
                 break;
             default:

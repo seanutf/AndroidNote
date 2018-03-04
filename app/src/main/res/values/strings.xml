@@ -35,6 +35,7 @@
     <string name="text_widget_textview">TextView</string>
     <string name="text_widget_surfaceview">SurfaceView</string>
     <string name="text_widget_toolbar">ToolBar</string>
+    <string name="text_widget_constraintLayout">ConstraintLayout</string>
     <!--ToolBar页面-->
     <string name="text_action_favorite">favorite</string>
     <string name="text_action_settings">settings</string>
