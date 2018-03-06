@@ -2,6 +2,7 @@ package com.sean.zq.android.module.qa;
 
 import android.content.Context;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -52,7 +53,7 @@ public class QAListDataAdapter extends BaseAdapter{
         QAMetaViewHolder holder = null;
         if(convertView == null){
             holder = new QAMetaViewHolder();
-            convertView = View.inflate(context, R.layout.qa_list_item,null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.qa_list_item, parent, false);
             holder.title = (TextView) convertView.findViewById(R.id.title);
             convertView.setTag(holder);
         } else {

@@ -2,6 +2,7 @@ package com.sean.zq.android.module.main;
 
 import android.content.Context;
 import android.content.Intent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -61,7 +62,7 @@ public class MainListDataAdapter extends BaseAdapter{
         MainDataViewHolder holder = null;
         if(convertView == null){
             holder = new MainDataViewHolder();
-            convertView = View.inflate(context, R.layout.main_list_item,null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.main_list_item,parent, false);
             holder.title = (TextView)convertView.findViewById(R.id.title);
             holder.summary = (TextView)convertView.findViewById(R.id.summary);
             convertView.setTag(holder);

@@ -3,6 +3,7 @@ package com.sean.zq.android.module.view.widget.textview;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -43,7 +44,7 @@ public class TextViewAdapter extends BaseAdapter{
         TextViewMetaViewHolder holder = null;
         if(convertView == null){
             holder = new TextViewMetaViewHolder();
-            convertView = View.inflate(context, R.layout.qa_list_item,null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.qa_list_item, parent ,false);
             holder.title = (TextView) convertView.findViewById(R.id.title);
             convertView.setTag(holder);
         } else {
