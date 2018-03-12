@@ -22,6 +22,7 @@ public class ConstraintLayoutActivity extends AppCompatActivity {
         RecyclerView rvUser = findViewById(R.id.rv_user);
         rvUser.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         DividerItemDecoration divider = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
+        //divider.getItemOffsets();
         divider.setDrawable(ContextCompat.getDrawable(this,R.drawable.cconstraint_demo_divider));
         rvUser.addItemDecoration(divider);
         ConstraintAdapter adapter = new ConstraintAdapter();

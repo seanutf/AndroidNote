@@ -3,9 +3,9 @@
        android:shape="rectangle">
 <!--  绿色 蓝色 红色-->
     <gradient
-        android:centerColor="#ff00ff00"
+        android:centerColor="#ff0000ff"
     android:endColor="#ff0000ff"
-    android:startColor="#ffff0000"
+    android:startColor="#ff0000ff"
     android:type="linear"/>
-    <size android:height="3dp" />
+    <size android:height="1dp" />
 </shape>

@@ -3,6 +3,8 @@ package com.sean.zq.android.module.kotlin
 import android.app.IntentService
 import android.content.Intent
 import android.content.Context
+import io.reactivex.plugins.RxJavaPlugins
+import java.io.InterruptedIOException
 import java.util.logging.Logger
 
 /**
@@ -39,6 +41,16 @@ class KotlinIntentService : IntentService("KotlinIntentService") {
         val log = Logger.getLogger(KotlinIntentService.javaClass.name)
         private val ACTION_PRINT = "com.sean.zq.android.module.kotlin.action.PRINT"
         private val ACTION_BAZ = "com.sean.zq.android.module.kotlin.action.BAZ"
+
+        val logStr = ACTION_BAZ + "dff"
+        init {
+            RxJavaPlugins.setErrorHandler { throwable ->
+                //is关键字等同于Java中的instanceof
+                if (throwable is InterruptedIOException) {
+                    log.info("Io interrupted")
+                }
+            }
+        }
 
         private val STR_PRINT = "com.sean.zq.android.module.kotlin.extra.STR_PRINT"
         private val EXTRA_PARAM2 = "com.sean.zq.android.module.kotlin.extra.PARAM2"
